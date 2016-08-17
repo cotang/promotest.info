@@ -1,0 +1,54 @@
+.news{
+
+  &__inner{
+    background-image: linear-gradient( 90deg, rgba(0,0,0,0), rgba(0,0,0,.25) 50%, rgba(0,0,0,0));
+    background-repeat: no-repeat; 
+    background-position: 50% 100%;
+    background-size: 100% 1px;
+    padding-bottom: 20px;    
+  }
+  &__title{
+    position: relative;    
+    font-weight: $bold;
+    font-size: $font-size-subtitle;
+    color: $dark-blue;
+    @include mq($from:xs, $until:sm){
+      font-size: $font-size-promo;
+    }     
+    &:after{
+      content: '';
+      display: block;
+      width: 55px;
+      height: 3px;
+      background-color: $light-blue;
+      margin-top: 10px;
+    }
+  }
+  &__excerpt{
+    position: relative;
+    margin: 20px 0;
+  }
+  &__link{
+    position: absolute;
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: $dark-blue;
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include sprite($s-news-prefix);
+    }    
+  }
+  &__text{
+    margin-left: 50px;
+    @include mq($from:xs, $until:sm){
+      font-size: $font-size-content;
+    }     
+  }
+}

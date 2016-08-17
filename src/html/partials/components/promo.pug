@@ -1,0 +1,14 @@
+include ../abstracts/mixins/_promo-item.pug
+include ../abstracts/bemto/bemto.pug
+
+// Promo
++b.SECTION.promo
+  .container
+    .row
+      .col-xs-12
+        +e.inner       
+          +promoItem("pic01.jpg","Начинающему предпринимателю", "Начинающему предпринимателю")
+          +promoItem("pic02.jpg","Российскому производителю", "Российскому производителю")
+          +promoItem("pic03.jpg","Иностранным компаниям", "Иностранным компаниям")
+          +promoItem("pic04.jpg","Выход на европейский рынок", "Выход на европейский рынок")
+          +promoItem("pic05.jpg","Ввоз автомобилей", "Ввоз автомобилей")

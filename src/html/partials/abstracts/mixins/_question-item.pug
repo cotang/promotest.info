@@ -1,0 +1,5 @@
+mixin questionItem(title, text)
+  +b.question
+    +e.H3.title
+      +e.A.link(href="#") #{title}   
+    +e.answer #{text}

@@ -1,0 +1,81 @@
+include ../abstracts/bemto/bemto.pug
+
+// Footer
++b.FOOTER.footer
+  // Nav menu
+  .container
+    .row
+      .col-xs-12.col-sm-6.col-lg-3.col-xl-4.border-right
+        // Logo
+        +b.A.logo(href="#") 
+          img(src="img/logo.png", alt="logo", title="logo")
+        +e.P.address г. Санкт-Петербург, Станция метро: "Площадь Восстания", 2-я Советская ул., д. 7, 1 эт., оф. 111
+        +e.P.contact-info
+          +e.email E-mail:
+            a(href="mailto:info@promotest.info", target="_blank") info@promotest.info
+          +e.tel Тел/факс:    
+            a(href="tel:+78123321705", target="_blank") +7 812 332-17-05
+          +e.tel Телефон:
+            a(href="tel:+78129279450", target="_blank") +7 812 927-94-50
+        +e.P.working-hours Мы работаем с 9:30 до 18:00 по местному времени
+      .col-xs-6.col-lg-3.col-xl-2.border-right
+        // Nav menu
+        +b.NAV.nav--footer
+          +e.H3.title Меню
+          +e.UL.list
+            +e.item 
+              +e.link--active(href="index.html") Главная
+            +e.item 
+              +e.link(href="page.html") О нас
+            +e.item
+              +e.link(href="page.html") Услуги           
+            +e.item
+              +e.link(href="page.html") Сертификация продукции                 
+            +e.item
+              +e.link(href="page-contacts.html") Контакты
+      .col-xs-6.col-md-4.col-lg-3.col-xl-2.border-right
+        +b.SECTION.documents
+          +e.H3.title Документы для
+          +e.UL.list
+            +e.item 
+              +e.link(href="#") Заграничный паспорт
+            +e.item 
+              +e.link(href="#") Центр юридических услуг
+            +e.item
+              +e.link(href="#") Центр автоуслуг
+            +e.item 
+              +e.link(href="#") Паспорт гражданина РФ
+            +e.item 
+              +e.link(href="#") Комплексная услуга для граждан, сменивших ФИО
+            +e.item
+              +e.link(href="#") Оформление недвижимости  
+          +e.all-link
+            +b.A.all-link--bottom(href="#") Все новости (
+              span 37
+              =" )"                         
+      .col-xs-6.col-md-4.col-lg-3.col-xl-2.border-right
+        +b.SECTION.documents
+          +e.H3.title Документы
+          +e.UL.list
+            +e.item 
+              +e.link(href="#") Пункт меню пример
+            +e.item 
+              +e.link(href="#") Пункт меню пример
+            +e.item
+              +e.link(href="#") Пункт меню пример
+            +e.item 
+              +e.link(href="#") Пункт меню пример
+            +e.item 
+              +e.link(href="#") Пункт меню пример
+            +e.item
+              +e.link(href="#") Пункт меню пример 
+      .col-xs-6.col-sm-12.col-md-4.col-lg-12.col-xl-2
+        +b.SECTON.widget-vk 
+          +e.inner 
+            span Виджет Вконтакте
+      .col-xs-12
+        +e.copyright Copyright © 2016 promotest.info
++b.overlay
+
+
+

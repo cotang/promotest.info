@@ -1,0 +1,5 @@
+mixin manager(name, icq, skype)
+  +b.manager
+    +e.H3.name #{name}
+    +e.A.icq(href= "http://www.icq.com/whitepages/cmd.php?uin=" + icq + "&action=message") #{icq}
+    +e.A.skype(href= "skype:" + skype) #{skype}

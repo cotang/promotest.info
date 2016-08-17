@@ -1,0 +1,211 @@
+.nav{
+  padding-bottom: 10px;
+  border-bottom: 2px solid $dark-blue;
+  @include mq($from:xs, $until:md){
+    border-bottom: none;
+  }
+
+  &__hamburger{
+    display: none;
+    text-align: center;
+  }  
+  &__list{
+    padding-left: 0;     
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    @include mq($from:xs, $until:md){
+      display: block;
+      text-align: center;
+    }     
+  }
+  &__item{
+    padding-bottom: 10px;
+    position: relative;
+    padding-right: 45px;  
+    @include mq($from:md, $until:lg){
+      padding-right: 30px; 
+    }
+    @include mq($from:xs, $until:md){
+      padding-right: 0;
+      padding-bottom: 15px; 
+    }  
+    &:hover, &:focus, &:active{
+      .nav__link{
+        // border-bottom: 5px solid $light-blue;
+        color: $light-blue;
+      }
+      // .nav__link--active{
+      //   color: $orange; 
+      // }      
+      .dropdown-menu{
+        display: block;
+      }
+    }
+    &:after{
+      position: absolute;
+      right: 0;
+      top: 0;
+      content: "/";
+      @include mq($from:xs, $until:md){
+        content: "";
+      } 
+    }
+  }
+  &__item:nth-last-of-type(2){  
+    padding-right: 0;      
+    &:after{
+      content: "";
+    }
+  }  
+  &__link{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    @include mq($from:xs, $until:md){
+      padding-bottom: 5px;
+    } 
+    &--active{
+      border-bottom: 5px solid $light-blue; 
+    }
+  }
+  &__title{
+    margin: 0;
+    text-transform: uppercase;
+    color: $dark-blue;
+    font-size: $font-size;
+    font-weight: $regular;
+  }
+
+
+  &--footer{
+    margin-top: 20px;
+    border-bottom: none;
+    font-size: $font-size-content;
+    .nav__list{
+      display: block;
+      text-align: left;
+    }
+    .nav__item{
+      margin: 15px 0;
+      padding-bottom: 0;
+      &:after{
+        content: "";
+      }
+    }
+    .nav__link{
+      padding-bottom: 0;
+      &--active{
+        border-bottom: 2px solid $light-blue; 
+      }      
+    }
+  }
+}
+
+.dropdown-menu{
+  width: 270px;                   /* возможно нужно убрать */ 
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: -10px;
+  list-style-type: none;
+  background-color: $body-bg;
+  border: 1px solid $dark-blue;
+  display: none;
+  position: absolute;
+  z-index: 2;
+  bottom: -20px;
+  left: 0;
+  transform: translateY(100%);
+  &__item{
+    padding: 10px 0;
+    border-bottom: 1px solid $dark-blue;
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+  &__link{
+    display: inline-block;
+    padding: 0 10px;
+    &:hover, &:focus, &:active{
+      color: $light-blue;
+    }
+  }  
+}
+
+.search{
+  margin-top: -5px;
+  position: relative;
+  &__form{
+    @include mq($from:md, $until:xl){
+      position: absolute;
+      right: 0;
+    }    
+    @include mq($from:xs, $until:md){
+      position: relative;
+      bottom: 0;
+      right: 50%;
+      transform: translateX(50%);
+    }    
+  }
+  &__input{
+    width: 380px;
+    font-size: $font-size-small;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.36);
+    @include mq($from:xs, $until:xl){
+      width: 300px;
+    }    
+    &:hover, &:focus{
+      outline: none;
+    }
+    &:focus::-webkit-input-placeholder{
+      color: transparent;         
+    }       
+    &:focus::placeholder{
+      color: transparent;         
+    }    
+  }
+  &__icon{
+    display: block;
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    top: 50%;
+    transform: translate(-100%, -50%);
+    @include sprite($s-loupe);    
+    background-color: transparent;
+    border: none;
+    outline: none;
+    
+    @include mq($from:md, $until:lg){
+      position: relative;
+      top: inherit;
+      right: 10px; 
+      transform: none;
+      display: inline-block;
+      vertical-align: bottom;
+    }  
+    @include mq($from:xs, $until:md){
+      position: relative;
+      transform: none;
+      display: inline-block;
+            
+    }       
+  }
+}
+
+
+.hamburger{
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  @include sprite($s-hamburger);
+}
+
+.hamburger--close{
+  @include sprite($s-hamburger-close);
+}

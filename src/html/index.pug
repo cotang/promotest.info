@@ -1,0 +1,24 @@
+extends partials/templates/template.pug
+
+block content
+  +b.SECTION.page--front-page
+    include partials/components/promo.pug
+    .container
+      .row
+        .col-xs-12.col-xl-8
+          include partials/components/content.pug
+        .col-xs-12.col-md-8.offset-md-2.col-lg-6.offset-lg-3.col-xl-4.offset-xl-0
+          include partials/components/sidebar.pug 
+    .container
+      .row
+        .col-xs-12
+          +e.page__wide-form              
+            include partials/components/form--call.pug 
+    include partials/components/news.pug
+    .container
+      .row
+        .col-xs-12.col-xl-6
+          include partials/components/reviews.pug
+        .col-xs-12.col-xl-6
+          include partials/components/questions.pug   
+

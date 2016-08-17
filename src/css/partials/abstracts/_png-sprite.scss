@@ -1,0 +1,481 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$s-arrow-next-name: 's-arrow-next';
+$s-arrow-next-x: 247px;
+$s-arrow-next-y: 102px;
+$s-arrow-next-offset-x: -247px;
+$s-arrow-next-offset-y: -102px;
+$s-arrow-next-width: 24px;
+$s-arrow-next-height: 24px;
+$s-arrow-next-total-width: 377px;
+$s-arrow-next-total-height: 274px;
+$s-arrow-next-image: '../img/png-sprite.png';
+$s-arrow-next: (247px, 102px, -247px, -102px, 24px, 24px, 377px, 274px, '../img/png-sprite.png', 's-arrow-next', );
+$s-arrow-prev-name: 's-arrow-prev';
+$s-arrow-prev-x: 232px;
+$s-arrow-prev-y: 143px;
+$s-arrow-prev-offset-x: -232px;
+$s-arrow-prev-offset-y: -143px;
+$s-arrow-prev-width: 24px;
+$s-arrow-prev-height: 24px;
+$s-arrow-prev-total-width: 377px;
+$s-arrow-prev-total-height: 274px;
+$s-arrow-prev-image: '../img/png-sprite.png';
+$s-arrow-prev: (232px, 143px, -232px, -143px, 24px, 24px, 377px, 274px, '../img/png-sprite.png', 's-arrow-prev', );
+$s-block-arrow-name: 's-block-arrow';
+$s-block-arrow-x: 324px;
+$s-block-arrow-y: 262px;
+$s-block-arrow-offset-x: -324px;
+$s-block-arrow-offset-y: -262px;
+$s-block-arrow-width: 17px;
+$s-block-arrow-height: 8px;
+$s-block-arrow-total-width: 377px;
+$s-block-arrow-total-height: 274px;
+$s-block-arrow-image: '../img/png-sprite.png';
+$s-block-arrow: (324px, 262px, -324px, -262px, 17px, 8px, 377px, 274px, '../img/png-sprite.png', 's-block-arrow', );
+$s-city-arrow-name: 's-city-arrow';
+$s-city-arrow-x: 232px;
+$s-city-arrow-y: 102px;
+$s-city-arrow-offset-x: -232px;
+$s-city-arrow-offset-y: -102px;
+$s-city-arrow-width: 15px;
+$s-city-arrow-height: 41px;
+$s-city-arrow-total-width: 377px;
+$s-city-arrow-total-height: 274px;
+$s-city-arrow-image: '../img/png-sprite.png';
+$s-city-arrow: (232px, 102px, -232px, -102px, 15px, 41px, 377px, 274px, '../img/png-sprite.png', 's-city-arrow', );
+$s-contacts-icq-name: 's-contacts-icq';
+$s-contacts-icq-x: 306px;
+$s-contacts-icq-y: 175px;
+$s-contacts-icq-offset-x: -306px;
+$s-contacts-icq-offset-y: -175px;
+$s-contacts-icq-width: 17px;
+$s-contacts-icq-height: 16px;
+$s-contacts-icq-total-width: 377px;
+$s-contacts-icq-total-height: 274px;
+$s-contacts-icq-image: '../img/png-sprite.png';
+$s-contacts-icq: (306px, 175px, -306px, -175px, 17px, 16px, 377px, 274px, '../img/png-sprite.png', 's-contacts-icq', );
+$s-contacts-skype-name: 's-contacts-skype';
+$s-contacts-skype-x: 262px;
+$s-contacts-skype-y: 78px;
+$s-contacts-skype-offset-x: -262px;
+$s-contacts-skype-offset-y: -78px;
+$s-contacts-skype-width: 15px;
+$s-contacts-skype-height: 15px;
+$s-contacts-skype-total-width: 377px;
+$s-contacts-skype-total-height: 274px;
+$s-contacts-skype-image: '../img/png-sprite.png';
+$s-contacts-skype: (262px, 78px, -262px, -78px, 15px, 15px, 377px, 274px, '../img/png-sprite.png', 's-contacts-skype', );
+$s-hamburger-close-name: 's-hamburger-close';
+$s-hamburger-close-x: 256px;
+$s-hamburger-close-y: 143px;
+$s-hamburger-close-offset-x: -256px;
+$s-hamburger-close-offset-y: -143px;
+$s-hamburger-close-width: 21px;
+$s-hamburger-close-height: 21px;
+$s-hamburger-close-total-width: 377px;
+$s-hamburger-close-total-height: 274px;
+$s-hamburger-close-image: '../img/png-sprite.png';
+$s-hamburger-close: (256px, 143px, -256px, -143px, 21px, 21px, 377px, 274px, '../img/png-sprite.png', 's-hamburger-close', );
+$s-hamburger-name: 's-hamburger';
+$s-hamburger-x: 232px;
+$s-hamburger-y: 78px;
+$s-hamburger-offset-x: -232px;
+$s-hamburger-offset-y: -78px;
+$s-hamburger-width: 30px;
+$s-hamburger-height: 24px;
+$s-hamburger-total-width: 377px;
+$s-hamburger-total-height: 274px;
+$s-hamburger-image: '../img/png-sprite.png';
+$s-hamburger: (232px, 78px, -232px, -78px, 30px, 24px, 377px, 274px, '../img/png-sprite.png', 's-hamburger', );
+$s-icon-barcode-name: 's-icon-barcode';
+$s-icon-barcode-x: 145px;
+$s-icon-barcode-y: 161px;
+$s-icon-barcode-offset-x: -145px;
+$s-icon-barcode-offset-y: -161px;
+$s-icon-barcode-width: 53px;
+$s-icon-barcode-height: 42px;
+$s-icon-barcode-total-width: 377px;
+$s-icon-barcode-total-height: 274px;
+$s-icon-barcode-image: '../img/png-sprite.png';
+$s-icon-barcode: (145px, 161px, -145px, -161px, 53px, 42px, 377px, 274px, '../img/png-sprite.png', 's-icon-barcode', );
+$s-icon-bricks-name: 's-icon-bricks';
+$s-icon-bricks-x: 144px;
+$s-icon-bricks-y: 118px;
+$s-icon-bricks-offset-x: -144px;
+$s-icon-bricks-offset-y: -118px;
+$s-icon-bricks-width: 73px;
+$s-icon-bricks-height: 34px;
+$s-icon-bricks-total-width: 377px;
+$s-icon-bricks-total-height: 274px;
+$s-icon-bricks-image: '../img/png-sprite.png';
+$s-icon-bricks: (144px, 118px, -144px, -118px, 73px, 34px, 377px, 274px, '../img/png-sprite.png', 's-icon-bricks', );
+$s-icon-document-name: 's-icon-document';
+$s-icon-document-x: 324px;
+$s-icon-document-y: 210px;
+$s-icon-document-offset-x: -324px;
+$s-icon-document-offset-y: -210px;
+$s-icon-document-width: 46px;
+$s-icon-document-height: 52px;
+$s-icon-document-total-width: 377px;
+$s-icon-document-total-height: 274px;
+$s-icon-document-image: '../img/png-sprite.png';
+$s-icon-document: (324px, 210px, -324px, -210px, 46px, 52px, 377px, 274px, '../img/png-sprite.png', 's-icon-document', );
+$s-icon-eac-doc-name: 's-icon-eac-doc';
+$s-icon-eac-doc-x: 277px;
+$s-icon-eac-doc-y: 70px;
+$s-icon-eac-doc-offset-x: -277px;
+$s-icon-eac-doc-offset-y: -70px;
+$s-icon-eac-doc-width: 46px;
+$s-icon-eac-doc-height: 52px;
+$s-icon-eac-doc-total-width: 377px;
+$s-icon-eac-doc-total-height: 274px;
+$s-icon-eac-doc-image: '../img/png-sprite.png';
+$s-icon-eac-doc: (277px, 70px, -277px, -70px, 46px, 52px, 377px, 274px, '../img/png-sprite.png', 's-icon-eac-doc', );
+$s-icon-eac-pic-name: 's-icon-eac-pic';
+$s-icon-eac-pic-x: 69px;
+$s-icon-eac-pic-y: 161px;
+$s-icon-eac-pic-offset-x: -69px;
+$s-icon-eac-pic-offset-y: -161px;
+$s-icon-eac-pic-width: 76px;
+$s-icon-eac-pic-height: 47px;
+$s-icon-eac-pic-total-width: 377px;
+$s-icon-eac-pic-total-height: 274px;
+$s-icon-eac-pic-image: '../img/png-sprite.png';
+$s-icon-eac-pic: (69px, 161px, -69px, -161px, 76px, 47px, 377px, 274px, '../img/png-sprite.png', 's-icon-eac-pic', );
+$s-icon-eac-name: 's-icon-eac';
+$s-icon-eac-x: 56px;
+$s-icon-eac-y: 218px;
+$s-icon-eac-offset-x: -56px;
+$s-icon-eac-offset-y: -218px;
+$s-icon-eac-width: 59px;
+$s-icon-eac-height: 51px;
+$s-icon-eac-total-width: 377px;
+$s-icon-eac-total-height: 274px;
+$s-icon-eac-image: '../img/png-sprite.png';
+$s-icon-eac: (56px, 218px, -56px, -218px, 59px, 51px, 377px, 274px, '../img/png-sprite.png', 's-icon-eac', );
+$s-icon-eagle-ez-name: 's-icon-eagle-ez';
+$s-icon-eagle-ez-x: 277px;
+$s-icon-eagle-ez-y: 0px;
+$s-icon-eagle-ez-offset-x: -277px;
+$s-icon-eagle-ez-offset-y: 0px;
+$s-icon-eagle-ez-width: 47px;
+$s-icon-eagle-ez-height: 70px;
+$s-icon-eagle-ez-total-width: 377px;
+$s-icon-eagle-ez-total-height: 274px;
+$s-icon-eagle-ez-image: '../img/png-sprite.png';
+$s-icon-eagle-ez: (277px, 0px, -277px, 0px, 47px, 70px, 377px, 274px, '../img/png-sprite.png', 's-icon-eagle-ez', );
+$s-icon-eagle-round-name: 's-icon-eagle-round';
+$s-icon-eagle-round-x: 0px;
+$s-icon-eagle-round-y: 0px;
+$s-icon-eagle-round-offset-x: 0px;
+$s-icon-eagle-round-offset-y: 0px;
+$s-icon-eagle-round-width: 71px;
+$s-icon-eagle-round-height: 70px;
+$s-icon-eagle-round-total-width: 377px;
+$s-icon-eagle-round-total-height: 274px;
+$s-icon-eagle-round-image: '../img/png-sprite.png';
+$s-icon-eagle-round: (0px, 0px, 0px, 0px, 71px, 70px, 377px, 274px, '../img/png-sprite.png', 's-icon-eagle-round', );
+$s-icon-eagle-shield-name: 's-icon-eagle-shield';
+$s-icon-eagle-shield-x: 0px;
+$s-icon-eagle-shield-y: 70px;
+$s-icon-eagle-shield-offset-x: 0px;
+$s-icon-eagle-shield-offset-y: -70px;
+$s-icon-eagle-shield-width: 51px;
+$s-icon-eagle-shield-height: 91px;
+$s-icon-eagle-shield-total-width: 377px;
+$s-icon-eagle-shield-total-height: 274px;
+$s-icon-eagle-shield-image: '../img/png-sprite.png';
+$s-icon-eagle-shield: (0px, 70px, 0px, -70px, 51px, 91px, 377px, 274px, '../img/png-sprite.png', 's-icon-eagle-shield', );
+$s-icon-eagle-name: 's-icon-eagle';
+$s-icon-eagle-x: 71px;
+$s-icon-eagle-y: 62px;
+$s-icon-eagle-offset-x: -71px;
+$s-icon-eagle-offset-y: -62px;
+$s-icon-eagle-width: 62px;
+$s-icon-eagle-height: 68px;
+$s-icon-eagle-total-width: 377px;
+$s-icon-eagle-total-height: 274px;
+$s-icon-eagle-image: '../img/png-sprite.png';
+$s-icon-eagle: (71px, 62px, -71px, -62px, 62px, 68px, 377px, 274px, '../img/png-sprite.png', 's-icon-eagle', );
+$s-icon-fire-doc-name: 's-icon-fire-doc';
+$s-icon-fire-doc-x: 324px;
+$s-icon-fire-doc-y: 157px;
+$s-icon-fire-doc-offset-x: -324px;
+$s-icon-fire-doc-offset-y: -157px;
+$s-icon-fire-doc-width: 46px;
+$s-icon-fire-doc-height: 53px;
+$s-icon-fire-doc-total-width: 377px;
+$s-icon-fire-doc-total-height: 274px;
+$s-icon-fire-doc-image: '../img/png-sprite.png';
+$s-icon-fire-doc: (324px, 157px, -324px, -157px, 46px, 53px, 377px, 274px, '../img/png-sprite.png', 's-icon-fire-doc', );
+$s-icon-fire-name: 's-icon-fire';
+$s-icon-fire-x: 0px;
+$s-icon-fire-y: 218px;
+$s-icon-fire-offset-x: 0px;
+$s-icon-fire-offset-y: -218px;
+$s-icon-fire-width: 56px;
+$s-icon-fire-height: 56px;
+$s-icon-fire-total-width: 377px;
+$s-icon-fire-total-height: 274px;
+$s-icon-fire-image: '../img/png-sprite.png';
+$s-icon-fire: (0px, 218px, 0px, -218px, 56px, 56px, 377px, 274px, '../img/png-sprite.png', 's-icon-fire', );
+$s-icon-industrial-name: 's-icon-industrial';
+$s-icon-industrial-x: 324px;
+$s-icon-industrial-y: 0px;
+$s-icon-industrial-offset-x: -324px;
+$s-icon-industrial-offset-y: 0px;
+$s-icon-industrial-width: 53px;
+$s-icon-industrial-height: 53px;
+$s-icon-industrial-total-width: 377px;
+$s-icon-industrial-total-height: 274px;
+$s-icon-industrial-image: '../img/png-sprite.png';
+$s-icon-industrial: (324px, 0px, -324px, 0px, 53px, 53px, 377px, 274px, '../img/png-sprite.png', 's-icon-industrial', );
+$s-icon-iso-name: 's-icon-iso';
+$s-icon-iso-x: 0px;
+$s-icon-iso-y: 161px;
+$s-icon-iso-offset-x: 0px;
+$s-icon-iso-offset-y: -161px;
+$s-icon-iso-width: 69px;
+$s-icon-iso-height: 57px;
+$s-icon-iso-total-width: 377px;
+$s-icon-iso-total-height: 274px;
+$s-icon-iso-image: '../img/png-sprite.png';
+$s-icon-iso: (0px, 161px, 0px, -161px, 69px, 57px, 377px, 274px, '../img/png-sprite.png', 's-icon-iso', );
+$s-icon-mail-name: 's-icon-mail';
+$s-icon-mail-x: 229px;
+$s-icon-mail-y: 218px;
+$s-icon-mail-offset-x: -229px;
+$s-icon-mail-offset-y: -218px;
+$s-icon-mail-width: 52px;
+$s-icon-mail-height: 42px;
+$s-icon-mail-total-width: 377px;
+$s-icon-mail-total-height: 274px;
+$s-icon-mail-image: '../img/png-sprite.png';
+$s-icon-mail: (229px, 218px, -229px, -218px, 52px, 42px, 377px, 274px, '../img/png-sprite.png', 's-icon-mail', );
+$s-icon-mechanism-doc-name: 's-icon-mechanism-doc';
+$s-icon-mechanism-doc-x: 324px;
+$s-icon-mechanism-doc-y: 53px;
+$s-icon-mechanism-doc-offset-x: -324px;
+$s-icon-mechanism-doc-offset-y: -53px;
+$s-icon-mechanism-doc-width: 53px;
+$s-icon-mechanism-doc-height: 53px;
+$s-icon-mechanism-doc-total-width: 377px;
+$s-icon-mechanism-doc-total-height: 274px;
+$s-icon-mechanism-doc-image: '../img/png-sprite.png';
+$s-icon-mechanism-doc: (324px, 53px, -324px, -53px, 53px, 53px, 377px, 274px, '../img/png-sprite.png', 's-icon-mechanism-doc', );
+$s-icon-mechanism-name: 's-icon-mechanism';
+$s-icon-mechanism-x: 115px;
+$s-icon-mechanism-y: 218px;
+$s-icon-mechanism-offset-x: -115px;
+$s-icon-mechanism-offset-y: -218px;
+$s-icon-mechanism-width: 56px;
+$s-icon-mechanism-height: 51px;
+$s-icon-mechanism-total-width: 377px;
+$s-icon-mechanism-total-height: 274px;
+$s-icon-mechanism-image: '../img/png-sprite.png';
+$s-icon-mechanism: (115px, 218px, -115px, -218px, 56px, 51px, 377px, 274px, '../img/png-sprite.png', 's-icon-mechanism', );
+$s-icon-minpromtorg-name: 's-icon-minpromtorg';
+$s-icon-minpromtorg-x: 144px;
+$s-icon-minpromtorg-y: 0px;
+$s-icon-minpromtorg-offset-x: -144px;
+$s-icon-minpromtorg-offset-y: 0px;
+$s-icon-minpromtorg-width: 88px;
+$s-icon-minpromtorg-height: 50px;
+$s-icon-minpromtorg-total-width: 377px;
+$s-icon-minpromtorg-total-height: 274px;
+$s-icon-minpromtorg-image: '../img/png-sprite.png';
+$s-icon-minpromtorg: (144px, 0px, -144px, 0px, 88px, 50px, 377px, 274px, '../img/png-sprite.png', 's-icon-minpromtorg', );
+$s-icon-ozone-name: 's-icon-ozone';
+$s-icon-ozone-x: 144px;
+$s-icon-ozone-y: 50px;
+$s-icon-ozone-offset-x: -144px;
+$s-icon-ozone-offset-y: -50px;
+$s-icon-ozone-width: 64px;
+$s-icon-ozone-height: 68px;
+$s-icon-ozone-total-width: 377px;
+$s-icon-ozone-total-height: 274px;
+$s-icon-ozone-image: '../img/png-sprite.png';
+$s-icon-ozone: (144px, 50px, -144px, -50px, 64px, 68px, 377px, 274px, '../img/png-sprite.png', 's-icon-ozone', );
+$s-icon-patented-name: 's-icon-patented';
+$s-icon-patented-x: 324px;
+$s-icon-patented-y: 106px;
+$s-icon-patented-offset-x: -324px;
+$s-icon-patented-offset-y: -106px;
+$s-icon-patented-width: 51px;
+$s-icon-patented-height: 51px;
+$s-icon-patented-total-width: 377px;
+$s-icon-patented-total-height: 274px;
+$s-icon-patented-image: '../img/png-sprite.png';
+$s-icon-patented: (324px, 106px, -324px, -106px, 51px, 51px, 377px, 274px, '../img/png-sprite.png', 's-icon-patented', );
+$s-icon-rst-voluntary-name: 's-icon-rst-voluntary';
+$s-icon-rst-voluntary-x: 71px;
+$s-icon-rst-voluntary-y: 0px;
+$s-icon-rst-voluntary-offset-x: -71px;
+$s-icon-rst-voluntary-offset-y: 0px;
+$s-icon-rst-voluntary-width: 73px;
+$s-icon-rst-voluntary-height: 62px;
+$s-icon-rst-voluntary-total-width: 377px;
+$s-icon-rst-voluntary-total-height: 274px;
+$s-icon-rst-voluntary-image: '../img/png-sprite.png';
+$s-icon-rst-voluntary: (71px, 0px, -71px, 0px, 73px, 62px, 377px, 274px, '../img/png-sprite.png', 's-icon-rst-voluntary', );
+$s-icon-rst-name: 's-icon-rst';
+$s-icon-rst-x: 171px;
+$s-icon-rst-y: 218px;
+$s-icon-rst-offset-x: -171px;
+$s-icon-rst-offset-y: -218px;
+$s-icon-rst-width: 58px;
+$s-icon-rst-height: 48px;
+$s-icon-rst-total-width: 377px;
+$s-icon-rst-total-height: 274px;
+$s-icon-rst-image: '../img/png-sprite.png';
+$s-icon-rst: (171px, 218px, -171px, -218px, 58px, 48px, 377px, 274px, '../img/png-sprite.png', 's-icon-rst', );
+$s-icon-sbkt-doc-name: 's-icon-sbkt-doc';
+$s-icon-sbkt-doc-x: 277px;
+$s-icon-sbkt-doc-y: 122px;
+$s-icon-sbkt-doc-offset-x: -277px;
+$s-icon-sbkt-doc-offset-y: -122px;
+$s-icon-sbkt-doc-width: 45px;
+$s-icon-sbkt-doc-height: 53px;
+$s-icon-sbkt-doc-total-width: 377px;
+$s-icon-sbkt-doc-total-height: 274px;
+$s-icon-sbkt-doc-image: '../img/png-sprite.png';
+$s-icon-sbkt-doc: (277px, 122px, -277px, -122px, 45px, 53px, 377px, 274px, '../img/png-sprite.png', 's-icon-sbkt-doc', );
+$s-icon-tpp-rf-name: 's-icon-tpp-rf';
+$s-icon-tpp-rf-x: 232px;
+$s-icon-tpp-rf-y: 0px;
+$s-icon-tpp-rf-offset-x: -232px;
+$s-icon-tpp-rf-offset-y: 0px;
+$s-icon-tpp-rf-width: 45px;
+$s-icon-tpp-rf-height: 78px;
+$s-icon-tpp-rf-total-width: 377px;
+$s-icon-tpp-rf-total-height: 274px;
+$s-icon-tpp-rf-image: '../img/png-sprite.png';
+$s-icon-tpp-rf: (232px, 0px, -232px, 0px, 45px, 78px, 377px, 274px, '../img/png-sprite.png', 's-icon-tpp-rf', );
+$s-loupe-name: 's-loupe';
+$s-loupe-x: 247px;
+$s-loupe-y: 126px;
+$s-loupe-offset-x: -247px;
+$s-loupe-offset-y: -126px;
+$s-loupe-width: 14px;
+$s-loupe-height: 14px;
+$s-loupe-total-width: 377px;
+$s-loupe-total-height: 274px;
+$s-loupe-image: '../img/png-sprite.png';
+$s-loupe: (247px, 126px, -247px, -126px, 14px, 14px, 377px, 274px, '../img/png-sprite.png', 's-loupe', );
+$s-news-prefix-name: 's-news-prefix';
+$s-news-prefix-x: 299px;
+$s-news-prefix-y: 204px;
+$s-news-prefix-offset-x: -299px;
+$s-news-prefix-offset-y: -204px;
+$s-news-prefix-width: 20px;
+$s-news-prefix-height: 14px;
+$s-news-prefix-total-width: 377px;
+$s-news-prefix-total-height: 274px;
+$s-news-prefix-image: '../img/png-sprite.png';
+$s-news-prefix: (299px, 204px, -299px, -204px, 20px, 14px, 377px, 274px, '../img/png-sprite.png', 's-news-prefix', );
+$s-promo-link-name: 's-promo-link';
+$s-promo-link-x: 277px;
+$s-promo-link-y: 175px;
+$s-promo-link-offset-x: -277px;
+$s-promo-link-offset-y: -175px;
+$s-promo-link-width: 29px;
+$s-promo-link-height: 29px;
+$s-promo-link-total-width: 377px;
+$s-promo-link-total-height: 274px;
+$s-promo-link-image: '../img/png-sprite.png';
+$s-promo-link: (277px, 175px, -277px, -175px, 29px, 29px, 377px, 274px, '../img/png-sprite.png', 's-promo-link', );
+$s-vk-name: 's-vk';
+$s-vk-x: 277px;
+$s-vk-y: 204px;
+$s-vk-offset-x: -277px;
+$s-vk-offset-y: -204px;
+$s-vk-width: 22px;
+$s-vk-height: 14px;
+$s-vk-total-width: 377px;
+$s-vk-total-height: 274px;
+$s-vk-image: '../img/png-sprite.png';
+$s-vk: (277px, 204px, -277px, -204px, 22px, 14px, 377px, 274px, '../img/png-sprite.png', 's-vk', );
+$spritesheet-width: 377px;
+$spritesheet-height: 274px;
+$spritesheet-image: '../img/png-sprite.png';
+$spritesheet-sprites: ($s-arrow-next, $s-arrow-prev, $s-block-arrow, $s-city-arrow, $s-contacts-icq, $s-contacts-skype, $s-hamburger-close, $s-hamburger, $s-icon-barcode, $s-icon-bricks, $s-icon-document, $s-icon-eac-doc, $s-icon-eac-pic, $s-icon-eac, $s-icon-eagle-ez, $s-icon-eagle-round, $s-icon-eagle-shield, $s-icon-eagle, $s-icon-fire-doc, $s-icon-fire, $s-icon-industrial, $s-icon-iso, $s-icon-mail, $s-icon-mechanism-doc, $s-icon-mechanism, $s-icon-minpromtorg, $s-icon-ozone, $s-icon-patented, $s-icon-rst-voluntary, $s-icon-rst, $s-icon-sbkt-doc, $s-icon-tpp-rf, $s-loupe, $s-news-prefix, $s-promo-link, $s-vk, );
+$spritesheet: (377px, 274px, '../img/png-sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

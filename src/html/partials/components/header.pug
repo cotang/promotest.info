@@ -1,0 +1,86 @@
+include ../abstracts/bemto/bemto.pug
+
+// Header
++b.HEADER.header
+  .container
+    .row
+      .col-xs-12.col-sm-6.col-md-4.col-xl-4
+        // Logo
+        +b.A.logo(href="#")       
+          img(src="img/logo.png", alt="logo", title="logo")
+      .col-xs-12.col-sm-6.col-md-3.col-xl-4
+        // City
+        +b.city
+          +e.name Санкт-Петербург
+          +e.choise
+            a(href="#") выбрать другой город
+          +e.UL.dropdown
+            +e.item(data-email= "info@promotest.info", data-tel1= "+7 (812) ", data-tel2= "332-17-05") Санкт-Петербург
+            +e.item(data-email= "otdel@promotest.info", data-tel1= "+7 (495) ", data-tel2= "783-29-26") Москва
+            +e.item(data-email= "info@promotest.info", data-tel1= "+7 (343) ", data-tel2= "253-28-14") Екатеринбург
+            +e.item(data-email= "23@promotest.info", data-tel1= "+7 (861) ", data-tel2= "944-13-65") Краснодар
+            +e.item(data-email= "kazan@promotest.info", data-tel1= "+7 (843) ", data-tel2= "258-56-07") Казань
+            +e.item(data-email= "52@promotest.info", data-tel1= "+7 (831) ", data-tel2= "414-41-30") Нижний Новгород
+            +e.item(data-email= "61@promotest.info", data-tel1= "+7 (863) ", data-tel2= "294-99-51") Ростов-на-Дону
+            +e.item(data-email= "26@promotest.info", data-tel1= "+7 (865) ", data-tel2= "233-01-38") Ставрополь
+            +e.item(data-email= "sochi@promotest.info", data-tel1= "+7 (862) ", data-tel2= "266-08-02") Сочи
+            +e.item(data-email= "82@promotest.info", data-tel1= "+7 (978) ", data-tel2= "982-66-30") Симферополь
+            +e.item(data-email= "92@promotest.info", data-tel1= "+7 (978) ", data-tel2= "982-66-32") Севастополь
+            +e.item(data-email= "351@promotest.info", data-tel1= "+7 (351) ", data-tel2= "247-10-02") Челябинск
+            +e.item(data-email= "51@promotest.info", data-tel1= "+7 (815) ", data-tel2= "260-74-39") Мурманск
+            +e.item(data-email= "minsk@promotest.info", data-tel1= "+375 (33) ", data-tel2= "606-32-18") Минск
+            +e.item(data-email= "54@promotest.info", data-tel1= "+7 (383) ", data-tel2= "310-20-45") Новосибирск
+            +e.item(data-email= "riga@promotest.info", data-tel1= "+371 ", data-tel2= "67651374") Рига
+      .col-xs-12.col-md-5.col-xl-4
+        +e.info
+          +e.contact-info
+            +e.email-wrapper
+              +e.A.email(href="mailto:info@promotest.info", target="_blank") info@promotest.info
+            +e.tel-wrapper
+              +e.A.tel(href="tel:+78123321705", target="_blank") +7 (812) 
+                span 332-17-05
+          +e.btn 
+            +b.A.btn(href="#") Заказать звонок
+  .container
+    .row
+      .col-xs-12                  
+        // Nav menu
+        +b.NAV.nav
+          +e.hamburger
+            +b.A.hamburger(href="#")
+          +e.UL.list
+            +e.item 
+              +e.link--active(href="index.html") Главная
+            +e.item 
+              +e.link(href="page.html") О нас
+            +e.item
+              +e.link(href="page.html") Услуги
+              +b.UL.dropdown-menu
+                +e.item 
+                  +e.link(href="page.html") Услуга 1
+                +e.item 
+                  +e.link(href="page.html") Услуга 2
+                +e.item 
+                  +e.link(href="page.html") Длинный пункт меню, который не влезает
+                +e.item
+                  +e.link(href="page.html") Услуга 4              
+            +e.item
+              +e.link(href="page.html") Сертификация продукции
+              +b.UL.dropdown-menu
+                +e.item 
+                  +e.link(href="page.html") Сертификат 1
+                +e.item 
+                  +e.link(href="page.html") Сертификат 2
+                +e.item 
+                  +e.link(href="page.html") Длинный пункт меню, который не влезает
+                +e.item
+                  +e.link(href="page.html") Сертификат 4 
+                +e.item
+                  +e.link(href="page.html") Сертификат 5                   
+            +e.item
+              +e.link(href="page-contacts.html") Контакты
+            +b.search
+              +e.FORM.form
+                +e.INPUT.input(type='text', name='Поиск', placeholder='поиск')
+              +e.A.icon(href="#") 
+
