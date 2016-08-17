@@ -20,7 +20,10 @@
     background-color: $body-bg;
     color: $dark-blue; 
     border: none;
-    text-shadow: none;    
+    text-shadow: none; 
+    &:hover, &:focus, &:active{
+      color: $dark-blue;
+    }       
   }
   &--vk{
     background-image: -moz-linear-gradient( 0deg, rgb(215,215,215) 0%, rgb(46,77,102) 0%, rgb(106,142,179) 100%);
