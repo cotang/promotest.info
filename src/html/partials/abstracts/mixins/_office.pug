@@ -8,7 +8,7 @@ mixin office(items)
       +e.H2.title #{item.title}
       +e.flags
         each flag in item.languages
-          img(src= "../img/" + flag[0] alt= flag[1] title= flag[1])
+          img(src= "img/" + flag[0] alt= flag[1] title= flag[1])
       +e.details
         if !item.fax
           p Если Вы планируете визит в наш офис, пожалуйста, предварительно свяжитесь с нашими специалистами по телефону: #{item.tel}
