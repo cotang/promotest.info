@@ -1,13 +1,13 @@
 include ../abstracts/mixins/_news-item.pug
 include ../abstracts/bemto/bemto.pug
 
-// News
-+b.SECTION.news    
+// News section
++b.SECTION.news-section   
   +e.inner.container
     .row
       .col-xs-12         
         +e.H2.title Новости
-        +b.A.all-link(href="#") Все новости (
+        +b.A.all-link(href="page-news.html") Все новости (
           span 37
           =' )'
       +newsItem("Новая услуга: подготовка документов для оформления ВНЖ  и гражданства РФ в едином центре документов")

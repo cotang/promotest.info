@@ -1,47 +1,20 @@
 .reviews{
-  margin-top: 40px;
-  margin-bottom: 20px;
+  // margin-top: 40px;
+  // margin-bottom: 20px;
 
-  &__title{
-    margin: 0 0 30px;
-    position: relative;    
-    font-weight: $bold;
-    font-size: $font-size-subtitle;
-    color: $dark-blue;
-    @include mq($from:xs, $until:sm){
-      font-size: $font-size-promo;
-    }    
-    &:after{
-      content: '';
-      display: block;
-      width: 55px;
-      height: 3px;
-      background-color: $light-blue;
-      margin-top: 10px;
-    }
+  &__pics{
+    display: flex;
+    flex-wrap: wrap;
   }
-  &__gallery{
-    // margin: 0 50px;
-    // @include mq($from:xs, $until:xl){
-    //   margin: 0 20px;
-    // }
-  }
-  &__slide{
-    text-align: center;
-  }
-  &__link{
-    display: inline-block;
-    margin-top: 20px; 
-    font-size: $font-size-promo;
-    &:hover, &:focus{
-      color: $light-blue;
-    }   
+  &__pic{
+    width: 25%;
+    padding: 0 10px;
+    margin-bottom: 30px;
   }
   &__img{
     display: block;
-    width: 175px; 
+    width: 100%; 
     height: auto;
-    margin: 0 15px;
     img{
       width: 100%;
       height: 100%;
@@ -66,46 +39,19 @@
       display: block;
     }
   }
-  &__link-block{
-    text-align: center;
+
+  &__form{
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto;
   }
-  &__link-main{
-    display: inline-block;
-    margin-top: 20px;
+  &__articles{
+    margin-top: 50px;
+  }
+}
+.review{
+  margin: 30px 0;
+  &__title{
     color: $dark-blue;
-    font-weight: $bold;
-    border-bottom: 1px dashed $dark-blue;
   }
-}
-.slick-arrow{
-  display: block;
-  background-color: transparent;
-  color: transparent;
-  border: none;
-  outline: none; 
-  padding: 0;   
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-  background-repeat: no-repeat;
-}
-.slick-prev{
-  @include sprite($s-arrow-prev);  
-  transform: translate(-150%, -250%);
-}
-.slick-next{
-  @include sprite($s-arrow-next);
-  transform: translate(0, -250%);   
-}
-.overlay{
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 8;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255,255,255,.8);
-  cursor: pointer;
-  display: none;
 }

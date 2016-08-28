@@ -1,7 +1,11 @@
 .office{
-
+  &__flags{
+    img{
+      margin-right: 10px;
+    }
+  }
   &__map{
-    padding: 20px 50px;
+    padding: 20px 0;
     @include mq($from:xs, $until:sm){
       padding: 0;
     } 
@@ -15,3 +19,4 @@
     }
   }
 }
+

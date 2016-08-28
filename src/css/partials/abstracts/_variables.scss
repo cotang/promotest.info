@@ -70,7 +70,9 @@ $dark-blue:                   #314b66;
 $btn-blue:                    #0054a6;
 $btn-border:                  #2e3c88;
 $btn-box-shadow:              rgba($btn-border, 0.2);
+$btn-box-shadow-hover:        darken($dark-blue, 0.2);
 $grey:                        #9d9d9d;
+$light-grey:                  #dddddd;
 $border-grey:                 #bebebe;
 
 $success:                     #5cb85c;
@@ -80,10 +82,11 @@ $error:                       #d9534f;
 // Colors in use
 
 $body-bg:                     $white;
+$grey-bg:                     $light-grey;
 $text-color:                  $black;
 
 $link-color:                  $text-color;
-$link-color--hover:           darken($link-color, 20%);
+$link-color--hover:           $light-blue;
 
 $text-color-white:            $white;
 $link-color-white:            $text-color-white;
@@ -116,6 +119,8 @@ $font-size-news-title:        16px;
 
 $font-size-directions:        12px;
 $font-size-ask:               22px;
+
+$font-size-text:              16px;
 
 
 $line-height:                 1.4em;

@@ -1,13 +1,43 @@
-include ../abstracts/mixins/_review-slide.pug
+include ../abstracts/mixins/_review-pic.pug
 include ../abstracts/bemto/bemto.pug
 
 // Reviews
-+b.SECTION.reviews
-  +e.H2.title С нами уже работают
-  +e.gallery
-    - for (var i = 1; i < 8; ++i){
-      +reviewSlide("review01.jpg","Документ1")
-    - }
-  +e.link-block
-    +e.A.link-main(href="#") Как стать клиентом?
-
++b.SECTION.reviews 
+  +e.pics
+    +reviewPic("review01.jpg","Отзыв 1")
+    +reviewPic("review02.jpg","Отзыв 2")
+    +reviewPic("review03.jpg","Отзыв 3")
+    +reviewPic("review04.jpg","Отзыв 4")
+    +reviewPic("review05.jpg","Отзыв 5")
+    +reviewPic("review06.jpg","Отзыв 6")
+    +reviewPic("review07.jpg","Отзыв 7")
+    +reviewPic("review08.jpg","Отзыв 8")
+    +reviewPic("review09.jpg","Отзыв 9")
+    +reviewPic("review10.jpg","Отзыв 10")
+    +reviewPic("review11.jpg","Отзыв 11")
+    +reviewPic("review12.jpg","Отзыв 12")
+    +reviewPic("review13.jpg","Отзыв 13")
+    +reviewPic("review14.jpg","Отзыв 14")
+    +reviewPic("review15.jpg","Отзыв 15")
+    +reviewPic("review16.jpg","Отзыв 16")
+  +e.form
+    include form--review.pug 
+  +e.reviews__articles
+    +b.ARTICLE.review
+      +e.H2.title Благодарим за плодотворное сотрудничество
+      +e.P.person Компания: 
+        span ООО Ринджана                
+      +e.P.text Комментарий: 
+        span Благодарим за плодотворное сотрудничество, индивидуальный подход, оперативность, грамотность при выполнении работ. 
+    +b.ARTICLE.review
+      +e.H2.title Благодарим за плодотворное сотрудничество
+      +e.P.person Компания: 
+        span ООО Ринджана                
+      +e.P.text Комментарий: 
+        span Благодарим за плодотворное сотрудничество, индивидуальный подход, оперативность, грамотность при выполнении работ. 
+    +b.ARTICLE.review
+      +e.H2.title Благодарим за плодотворное сотрудничество
+      +e.P.person Компания: 
+        span ООО Ринджана                
+      +e.P.text Комментарий: 
+        span Благодарим за плодотворное сотрудничество, индивидуальный подход, оперативность, грамотность при выполнении работ. 

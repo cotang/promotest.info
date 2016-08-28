@@ -18,7 +18,7 @@ body {
   background-color: $body-bg;
   color: $text-color;
   font-family: $font-family;
-  font-size: $font-size;
+  font-size: $font-size-text;
 }
 
 a {
@@ -31,6 +31,10 @@ a {
     color: $link-color--hover;
     // text-decoration: underline;
   }
+}
+
+button{
+  @include transition();  
 }
 
 img {
@@ -53,4 +57,19 @@ img {
   background-size: 1px 50%;  
 }
 
-
+h1{
+  font-size: $font-size-title;
+  font-weight: normal;
+}
+h2{
+  font-size: $font-size-subtitle;
+  font-weight: normal;
+}
+h3{
+  font-size: $font-size; 
+  font-weight: normal;
+}
+h4{
+  font-size: $font-size; 
+  font-weight: normal;
+}

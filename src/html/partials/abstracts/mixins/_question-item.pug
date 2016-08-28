@@ -1,5 +1,9 @@
-mixin questionItem(title, text)
-  +b.question
-    +e.H3.title
-      +e.A.link(href="#") #{title}   
-    +e.answer #{text}
+mixin questionItem(title, askPerson, askText)
+  +b.ARTICLE.question
+    +e.H2.subtitle
+      a(href="single-questions.html") #{title}   
+    +e.ask
+      +e.person !{askPerson}
+      +e.text !{askText}
+    +e.A.link(href="single-questions.html") Читать далее
+

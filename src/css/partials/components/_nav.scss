@@ -10,6 +10,7 @@
     text-align: center;
   }  
   &__list{
+    font-size: $font-size;
     padding-left: 0;     
     margin: 0;
     list-style-type: none;
@@ -23,43 +24,45 @@
   }
   &__item{
     padding-bottom: 10px;
-    position: relative;
-    padding-right: 45px;  
-    @include mq($from:md, $until:lg){
-      padding-right: 30px; 
-    }
+    // padding-right: 45px;  
+    // @include mq($from:md, $until:lg){
+    //   padding-right: 30px; 
+    // }
     @include mq($from:xs, $until:md){
-      padding-right: 0;
+      // padding-right: 0;
       padding-bottom: 15px; 
     }  
     &:hover, &:focus, &:active{
       .nav__link{
-        // border-bottom: 5px solid $light-blue;
         color: $light-blue;
-      }
-      // .nav__link--active{
-      //   color: $orange; 
-      // }      
+      }    
       .dropdown-menu{
-        display: block;
+        display: flex;
       }
     }
-    &:after{
-      position: absolute;
-      right: 0;
-      top: 0;
-      content: "/";
-      @include mq($from:xs, $until:md){
-        content: "";
-      } 
-    }
+    // &:after{
+    //   position: absolute;
+    //   right: 0;
+    //   top: 0;
+    //   content: "/";
+    //   @include mq($from:xs, $until:md){
+    //     content: "";
+    //   } 
+    // }
   }
-  &__item:nth-last-of-type(2){  
-    padding-right: 0;      
-    &:after{
-      content: "";
-    }
-  }  
+  // &__item:nth-last-of-type(2){  
+  //   padding-right: 0;      
+  //   &:after{
+  //     content: "";
+  //   }
+  // }  
+
+  &__slash{
+    @include mq($from:xs, $until:md){
+      display: none;
+    }    
+  }
+
   &__link{
     padding-top: 10px;
     padding-bottom: 15px;
@@ -104,33 +107,41 @@
 }
 
 .dropdown-menu{
-  width: 270px;                   /* возможно нужно убрать */ 
+  // width: 270px;                   /* возможно нужно убрать */ 
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: -10px;
   list-style-type: none;
   background-color: $body-bg;
-  border: 1px solid $dark-blue;
+  border: 2px solid $dark-blue;
   display: none;
   position: absolute;
   z-index: 2;
-  bottom: -20px;
+  bottom: 15px;
   left: 0;
   transform: translateY(100%);
+  // display: flex;
+  flex-wrap: wrap;
+  width: 100%;
   &__item{
-    padding: 10px 0;
-    border-bottom: 1px solid $dark-blue;
-    &:last-child{
-      border-bottom: none;
-    }
+    width: 25%;
+    padding: 15px 5px;
+    // border-bottom: 1px solid $dark-blue;
+    // &:nth-last-of-type(1){
+    //   border-bottom: none;
+    // }
+    &:hover, &:focus, &:active{
+      background-color: $light-blue;
+      .dropdown-menu__link{
+        color: $text-color-white; 
+        transition: none;       
+      }
+    }    
   }
   &__link{
     display: inline-block;
     padding: 0 10px;
-    &:hover, &:focus, &:active{
-      color: $light-blue;
-    }
   }  
 }
 

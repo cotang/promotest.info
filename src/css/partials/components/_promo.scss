@@ -1,6 +1,6 @@
 .promo{
 
-  &__inner{
+  &__gallery{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; 
@@ -18,6 +18,7 @@
     }       
   }
   &__item{
+    display: block;
     padding-bottom: 40px;
     &:hover, &:focus{
       .promo__img:before{
@@ -27,7 +28,7 @@
         display: block;
       }
       .promo__title{
-        color: $black;
+        color: $light-blue;
       }
     }
   }

@@ -1,0 +1,21 @@
+include ../abstracts/mixins/_review-slide.pug
+include ../abstracts/bemto/bemto.pug
+
+// Reviews Section
++b.SECTION.reviews-section
+  +e.H2.title С нами уже работают
+  +e.gallery
+    +reviewSlide("review01.jpg","Отзыв 1")
+    +reviewSlide("review02.jpg","Отзыв 2")
+    +reviewSlide("review03.jpg","Отзыв 3")
+    +reviewSlide("review04.jpg","Отзыв 4")
+    +reviewSlide("review05.jpg","Отзыв 5")
+    +reviewSlide("review06.jpg","Отзыв 6")
+    +reviewSlide("review07.jpg","Отзыв 7")
+    +reviewSlide("review08.jpg","Отзыв 8")
+  +e.link-block
+    +e.A.link-main(href="page-reviews.html") Как стать клиентом?
+
+    //- - for (var i = 1; i < 8; ++i){
+    //-   +reviewSlide("review01.jpg","Документ1")
+    //- - }

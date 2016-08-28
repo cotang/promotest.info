@@ -11,13 +11,19 @@ include ../abstracts/bemto/bemto.pug
           img(src="img/logo.png", alt="logo", title="logo")
         +e.P.address г. Санкт-Петербург, Станция метро: "Площадь Восстания", 2-я Советская ул., д. 7, 1 эт., оф. 111
         +e.P.contact-info
-          +e.email E-mail:
-            a(href="mailto:info@promotest.info", target="_blank") info@promotest.info
-          +e.tel Тел/факс:    
-            a(href="tel:+78123321705", target="_blank") +7 812 332-17-05
-          +e.tel Телефон:
-            a(href="tel:+78129279450", target="_blank") +7 812 927-94-50
-        +e.P.working-hours Мы работаем с 9:30 до 18:00 по местному времени
+          +e.email-wrapper E-mail:
+            +e.A.email(href="mailto:info@promotest.info", target="_blank") info@promotest.info
+          +e.tel-wrapper--tel1 Тел/факс:    
+            +e.A.tel(href="tel:+78123321705", target="_blank") +7 (812) 
+              span 332-17-05
+          +e.tel-wrapper--tel2 Телефон:
+            +e.A.tel(href="tel:+78129279450", target="_blank") +7 (812) 
+              span 927-94-50
+        +e.P.working-hours Мы работаем с 
+          span 9:30
+          =" до "
+          span 18:00
+          =" по местному времени"
       .col-xs-6.col-lg-3.col-xl-2.border-right
         // Nav menu
         +b.NAV.nav--footer
@@ -76,6 +82,10 @@ include ../abstracts/bemto/bemto.pug
       .col-xs-12
         +e.copyright Copyright © 2016 promotest.info
 +b.overlay
+  +e.form
+    include form--application.pug
+    include form--question.pug
+    include form--call.pug
 
 
 

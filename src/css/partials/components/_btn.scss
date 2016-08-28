@@ -14,6 +14,7 @@
   &:hover, &:focus, &:active{
     color: $text-color-white;
     text-decoration: none;
+    box-shadow: 0 0 7px 1px $btn-box-shadow-hover;
   }
   &--form{
     margin-bottom: 40px;    
@@ -23,6 +24,7 @@
     text-shadow: none; 
     &:hover, &:focus, &:active{
       color: $dark-blue;
+      box-shadow: 0 0 7px 1px $text-color-white;
     }       
   }
   &--vk{

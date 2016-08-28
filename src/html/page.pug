@@ -1,0 +1,17 @@
+extends partials/templates/template.pug
+
+block content
+  +b.SECTION.page
+    .container
+      .row
+        .col-xs-12.col-xl-8
+          +b.SECTION.breadcrumbs
+            a(href="page.html") Сертификационный центр Промотест
+            =' > '
+            a(href="page.html") Сертификация отдельных товаров
+            =' > '
+            span Сертификат соответствия ГОСТ Р
+          include partials/components/content.pug
+        .col-xs-12.col-md-8.offset-md-2.col-lg-6.offset-lg-3.col-xl-4.offset-xl-0
+          include partials/components/sidebar.pug
+

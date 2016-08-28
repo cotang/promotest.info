@@ -1,108 +1,13 @@
 .content{
-  text-align: center;
+  text-align: left;
 
   &__title{
     margin: 25px 0 45px;
     font-size: $font-size-title;
     color: $dark-blue;
-    font-weight: $regular;
+    font-weight: $semibold;
   }
-
-  &__item{
-    text-align: center;
-    margin-bottom: 60px;
-    .content__link:after{
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);      
-    }
-    &:nth-of-type(1) .content__link:after{
-      @include sprite($s-icon-rst);
-    }
-    &:nth-of-type(2) .content__link:after{
-      @include sprite($s-icon-rst-voluntary);
-    }
-    &:nth-of-type(3) .content__link:after{
-      @include sprite($s-icon-document);
-    }
-    &:nth-of-type(4) .content__link:after{
-      @include sprite($s-icon-eac);
-    }
-    &:nth-of-type(5) .content__link:after{
-      @include sprite($s-icon-eac-doc);
-    }
-    &:nth-of-type(6) .content__link:after{
-      @include sprite($s-icon-eagle);
-    }
-    &:nth-of-type(7) .content__link:after{
-      @include sprite($s-icon-eagle-ez);
-    }
-    &:nth-of-type(8) .content__link:after{
-      @include sprite($s-icon-mail);
-    } 
-    &:nth-of-type(9) .content__link:after{
-      @include sprite($s-icon-eac-pic);
-    }
-    &:nth-of-type(10) .content__link:after{
-      @include sprite($s-icon-mechanism);
-    }
-    &:nth-of-type(11) .content__link:after{
-      @include sprite($s-icon-mechanism-doc);
-    }
-    &:nth-of-type(12) .content__link:after{
-      @include sprite($s-icon-fire);
-    }
-    &:nth-of-type(13) .content__link:after{
-      @include sprite($s-icon-fire-doc);
-    }
-    &:nth-of-type(14) .content__link:after{
-      @include sprite($s-icon-sbkt-doc);
-    }
-    &:nth-of-type(15) .content__link:after{
-      @include sprite($s-icon-tpp-rf);
-    }
-    &:nth-of-type(16) .content__link:after{
-      @include sprite($s-icon-iso);
-    }    
-    &:nth-of-type(17) .content__link:after{
-      @include sprite($s-icon-bricks);
-    } 
-    &:nth-of-type(18) .content__link:after{
-      @include sprite($s-icon-barcode);
-    }
-    &:nth-of-type(19) .content__link:after{
-      @include sprite($s-icon-patented);
-    }
-    &:nth-of-type(20) .content__link:after{
-      @include sprite($s-icon-industrial);
-    }
-    &:nth-of-type(21) .content__link:after{
-      @include sprite($s-icon-ozone);
-    }
-    &:nth-of-type(22) .content__link:after{
-      @include sprite($s-icon-eagle-round);
-    }
-    &:nth-of-type(23) .content__link:after{
-      @include sprite($s-icon-eagle-shield);
-    }
-    &:nth-of-type(24) .content__link:after{
-      @include sprite($s-icon-minpromtorg);
-    }
-  }
-  &__link{
-    position: relative;
-    display: inline-block;
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    border: 1px solid $border-grey;
-    background-image: linear-gradient( 0deg, rgb(215,215,215) 0%, rgb(238,238,238) 100%);
-    box-shadow: 0px 2px 0px 0px rgba(237, 237, 237, 0.004), inset 0px 2px 0px 0px rgba(255, 255, 255, 0.004);
-  }
-  &__type{
-    font-size: $font-size-small;
-    margin-top: 10px;
+  &__offices{
+      margin-top: 40px;
   }
 }

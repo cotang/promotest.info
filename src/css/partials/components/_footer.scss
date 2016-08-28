@@ -13,19 +13,19 @@
     margin-top: 20px;
     font-size: $font-size-content;    
   }
-  &__email{
+  &__email-wrapper{
     display: block;
-    a{
-      color: $dark-blue;
-      font-size: $font-size-promo; 
-    }
+  }
+  &__email{
+    color: $dark-blue;
+    font-size: $font-size-promo; 
+  }
+  &__tel-wrapper{
+    display: block;
   }
   &__tel{
-    display: block;
-    a{
-      color: $dark-blue;
-      font-size: $font-size-promo; 
-    }
+    color: $dark-blue;
+    font-size: $font-size-promo; 
   }
   &__working-hours{
     margin-top: 20px;
