@@ -3,8 +3,17 @@ include ../abstracts/bemto/bemto.pug
 
 // Reviews Section
 +b.SECTION.reviews-section
-  +e.H2.title С нами уже работают
+  +e.H2.title 
+    a(href="page-reviews.html") С нами уже работают
   +e.gallery
+    +reviewSlide("review-new01.jpg","Отзыв 1")
+    +reviewSlide("review-new02.jpg","Отзыв 2")
+    +reviewSlide("review-new03.jpg","Отзыв 3")
+    +reviewSlide("review-new04.jpg","Отзыв 4")
+    +reviewSlide("review-new05.jpg","Отзыв 5")
+    +reviewSlide("review-new06.jpg","Отзыв 6")
+    +reviewSlide("review-new07.jpg","Отзыв 7")
+    +reviewSlide("review-new08.jpg","Отзыв 8")
     +reviewSlide("review01.jpg","Отзыв 1")
     +reviewSlide("review02.jpg","Отзыв 2")
     +reviewSlide("review03.jpg","Отзыв 3")

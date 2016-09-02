@@ -6,7 +6,7 @@
     margin: 0;  
     font-weight: $bold;
     font-size: $font-size-subtitle;
-    color: $dark-blue;
+
     @include mq($from:xs, $until:sm){
       font-size: $font-size-promo;
     }    
@@ -17,6 +17,12 @@
       height: 3px;
       background-color: $light-blue;
       margin-top: 10px;
+    }
+    a{
+      color: $dark-blue;
+      &:hover, &:focus{
+        color: $light-blue;
+      }      
     }
   }
   &__list{

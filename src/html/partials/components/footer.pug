@@ -1,5 +1,13 @@
 include ../abstracts/bemto/bemto.pug
 
+
+include news-section.pug
+.container
+  .row
+    .col-xs-12.col-xl-6
+      include reviews-section.pug
+    .col-xs-12.col-xl-6
+      include questions-section.pug   
 // Footer
 +b.FOOTER.footer
   // Nav menu
@@ -7,7 +15,7 @@ include ../abstracts/bemto/bemto.pug
     .row
       .col-xs-12.col-sm-6.col-lg-3.col-xl-4.border-right
         // Logo
-        +b.A.logo(href="#") 
+        +b.A.logo(href="index.html") 
           img(src="img/logo.png", alt="logo", title="logo")
         +e.P.address г. Санкт-Петербург, Станция метро: "Площадь Восстания", 2-я Советская ул., д. 7, 1 эт., оф. 111
         +e.P.contact-info
@@ -83,7 +91,7 @@ include ../abstracts/bemto/bemto.pug
         +e.copyright Copyright © 2016 promotest.info
 +b.overlay
   +e.form
-    include form--application.pug
+    //- include form--application.pug
     include form--question.pug
     include form--call.pug
 

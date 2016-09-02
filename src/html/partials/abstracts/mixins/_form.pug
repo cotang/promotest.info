@@ -9,51 +9,39 @@ mixin form(items)
       form(action='', method='', id= item.id)
         +e.A.close(href='#') Закрыть
         +e.H3.title #{item.title}
+
         if item.application
           .form-group.field-question-production.required
             +e.INPUT.input(type='text', name='Продукция', placeholder='Наименование продукции*') 
             p.help-block.help-block-error Ошибка заполнения поля формы
-        .form-group.field-question-name.required.has-error
-          +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя*')
-          p.help-block.help-block-error Ошибка заполнения поля формы
-        .form-group.field-question-phone.required.has-success
-          +e.INPUT.input(type='tel', name='Телефон', placeholder='Контактный телефон*')
-          p.help-block.help-block-error Ошибка заполнения поля формы
-        .form-group.field-question-email.required
-          +e.INPUT.input(type='email', name='Email', placeholder='Ваш e-mail*')
-          p.help-block.help-block-error Ошибка заполнения поля формы
-        .form-group.required
-          +e.region
-            +e.INPUT.input(type='text', name='Страна', placeholder='Страна*')
+          .form-group.field-question-name.required.has-error
+            +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя*')
             p.help-block.help-block-error Ошибка заполнения поля формы
-            +e.UL.region-list
-              li.bolder Россия
-              li.bolder Беларусь
-              li.bolder Казахстан
-              li Украина
-              li Азербайджан
-              li Армения    
-              li Грузия
-              li Молдавия
-        .form-group.required
-          +e.region
-            +e.INPUT.input(type='text', name='Регион', placeholder='Регион*')
+          .form-group.field-question-email.required.has-success
+            +e.INPUT.input(type='email', name='Email', placeholder='Ваш e-mail*')
             p.help-block.help-block-error Ошибка заполнения поля формы
-            +e.UL.region-list
-              li Санкт-Петербург и Ленинградская область
-              li Москва и Московская область
-              li Новгородская область
-              li Псковская область
-              li Республика Карелия
-              li Мурманская область
-              li Калининградская область
-              li Вологодская область
-              li Тверская область
+          .form-group.field-question-phone
+            +e.INPUT.input(type='tel', name='Телефон', placeholder='Контактный телефон')
+            p.help-block.help-block-error Ошибка заполнения поля формы            
+
         if item.question
+          .form-group.field-question-name.required.has-error
+            +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя*')
+            p.help-block.help-block-error Ошибка заполнения поля формы
+          .form-group.field-question-email.required.has-success
+            +e.INPUT.input(type='email', name='Email', placeholder='Ваш e-mail*')
+            p.help-block.help-block-error Ошибка заполнения поля формы
           .form-group.required
             +e.TEXTAREA.textarea(type='text', name='Ваш вопрос', placeholder='Ваш вопрос*')
             p.help-block.help-block-error Ошибка заполнения поля формы
+
         if item.call
+          .form-group.field-question-name.required.has-error
+            +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя*')
+            p.help-block.help-block-error Ошибка заполнения поля формы
+          .form-group.field-question-phone.required.has-success
+            +e.INPUT.input(type='tel', name='Телефон', placeholder='Контактный телефон*')
+            p.help-block.help-block-error Ошибка заполнения поля формы
           .form-group.required
             +e.time
               +e.SPAN.time-text Желаемое время звонка c
@@ -61,6 +49,7 @@ mixin form(items)
               +e.SPAN.time-text до
               +e.INPUT.input--time(type='time', name='Звонить до') 
             p.help-block.help-block-error Ошибка заполнения поля формы
+
         .form-group.recaptcha
           +b.captcha
         +b.BUTTON.btn--form(type='submit') #{item.button}

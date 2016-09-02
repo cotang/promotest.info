@@ -19,12 +19,15 @@
       background-color: $light-blue;
       margin-top: 10px;
     }
+    a{
+      color: $dark-blue;
+      &:hover, &:focus{
+        color: $light-blue;
+      }      
+    }
   }
   &__gallery{
-    // margin: 0 50px;
-    // @include mq($from:xs, $until:xl){
-    //   margin: 0 20px;
-    // }
+
   }
   &__slide{
     text-align: center;
@@ -37,7 +40,7 @@
   &__img{
     display: block;
     width: 175px; 
-    height: auto;
+    height: 120px;
     margin: 0 15px;
     img{
       width: 100%;

@@ -45,6 +45,9 @@ jQuery(document).ready(function($){
       $('.footer__working-hours span:last').html($(this).data("to"));
     }
 
+    var mapRegion = "img/map/" + $(this).data("map");
+    $('.location__map-region img').attr({'src': mapRegion, 'alt': $(this).html(), 'title': $(this).html()});
+
     $('.city__dropdown').hide(); 
     return false;
   });
@@ -92,10 +95,10 @@ jQuery(document).ready(function($){
   /* Close the modal window */
   $('.overlay').click( function(){ 
     $('body').css({"overflow":"auto"});
-    $('.reviews-section__modal')
+    $(this).find('.reviews-section__modal')
       .animate({opacity: 0}, 200,  
         function(){
-          $(this).hide();
+          $(this).remove();
           $('.overlay').fadeOut(400);
         }
       );
@@ -136,23 +139,8 @@ jQuery(document).ready(function($){
   $('.overlay').click( function(){ 
     $('body').css({"overflow":"auto"});
     $(this).find(".form").fadeOut();
-    $(overlay).fadeOut(400);
+    $('.overlay').fadeOut(400);
   }); 
-
-
-    /* списки в формах */
-  var regionInput = $('.form__region input');
-  var regionList = $('.form__region-list');    
-    $(regionInput).click(function() { 
-      $(this).closest('.form__region').find(regionList).show();   
-    });  
-    $(regionList).mouseleave(function(){
-      $(this).fadeOut('normal');
-    }).find('li').click(function(){
-      var regionText = $(this).text();
-      $(this).closest('.form__region').find(regionInput).val(regionText);
-      $(this).closest(regionList).mouseleave();
-    }); 
 
   /* открывание ответа по ссылке "читать далее" */
   $('.question__details').click(function(e) {

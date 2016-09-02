@@ -50,7 +50,7 @@ var path = {
     html: './src/html/*.pug',
     js: 'src/js/*.js',
     css: './src/css/*.scss',
-    img: 'src/img/*.*',
+    img: ['src/img/**/**.*', '!src/img/sprite-png/*.*'],
     fonts: 'src/fonts/**/*.*',
     sprites: 'src/img/sprite-png/*.png',
   },

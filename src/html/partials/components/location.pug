@@ -4,10 +4,12 @@ include ../abstracts/bemto/bemto.pug
 // Location
 +b.SECTION.location
   +e.map
-    img(src="img/map.png" alt="map" title="map")
+    +e.map-initial
+      img(src="img/map/map-initial.png", alt="map", title="map")
+    +e.map-region
+      img(src="img/map/map-spb.png", alt="spb", title="spb")
   +e.managers 
     +manager("Юлия Беляева","622-648-814", "skype01")
-    +manager("Марина Бугаева","693-726-445", "skype02")
     +manager("Анна Омельчук","668-566-902", "skype03")
     +manager("Алина Шевкунова","672-866-195", "skype04")
     +manager("Юлиана Титова","680-607-244", "skype05")
