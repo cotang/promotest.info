@@ -28,6 +28,18 @@
   .row {
     @include make-row();
   }
+
+  // Alignment for every column in row
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      &.row-#{$breakpoint}-top    { align-items: flex-start; }
+      &.row-#{$breakpoint}-middle { align-items: center; }
+      &.row-#{$breakpoint}-bottom { align-items: flex-end; }
+      &.row-#{$breakpoint}-stretch { align-items: stretch; }
+      &.row-#{$breakpoint}-baseline { align-items: baseline; }
+      &.row-#{$breakpoint}-nowrap { flex-wrap: nowrap}
+    }
+  }
 }
 
 // Columns
@@ -36,4 +48,23 @@
 
 @if $enable-grid-classes {
   @include make-grid-columns();
+
+  // Column ordering
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      &.col-#{$breakpoint}-first { order: -1; }
+      &.col-#{$breakpoint}-last  { order: 1; }
+    }
+  }
+
+  // Alignment per column
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      &.col-#{$breakpoint}-top    { align-self: flex-start; }
+      &.col-#{$breakpoint}-middle { align-self: center; }
+      &.col-#{$breakpoint}-bottom { align-self: flex-end; }
+      &.col-#{$breakpoint}-baseline { align-self: baseline; }
+      &.col-#{$breakpoint}-stretch { align-self: stretch; }
+    }
+  }  
 }

@@ -116,7 +116,7 @@ jQuery(document).ready(function($){
   /* Close the modal window */
   $('.overlay').click( function(){ 
     $('body').css({"overflow":"auto"});
-    $('.reviews__modal')
+    $(this).find('.reviews__modal')
       .animate({opacity: 0}, 200,  
         function(){
           $(this).hide();

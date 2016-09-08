@@ -42,13 +42,6 @@ mixin form(items)
           .form-group.field-question-phone.required.has-success
             +e.INPUT.input(type='tel', name='Телефон', placeholder='Контактный телефон*')
             p.help-block.help-block-error Ошибка заполнения поля формы
-          .form-group.required
-            +e.time
-              +e.SPAN.time-text Желаемое время звонка c
-              +e.INPUT.input--time(type='time', name='Звонить с') 
-              +e.SPAN.time-text до
-              +e.INPUT.input--time(type='time', name='Звонить до') 
-            p.help-block.help-block-error Ошибка заполнения поля формы
 
         .form-group.recaptcha
           +b.captcha

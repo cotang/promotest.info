@@ -2,8 +2,11 @@
   text-align: left;
   padding: 20px;
 
-  &__wide-form{
-    padding: 20px 0;
+  &__form{
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    // padding: 20px 0;
           
     .form__close{
       display: none;
@@ -11,7 +14,7 @@
     .form-group{
       display: inline-block;
       vertical-align: top;
-      width: calc(33% - 60px);
+      width: calc(100% - 60px);
     }
     .form-group.recaptcha{
       margin: 0;

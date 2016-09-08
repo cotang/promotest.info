@@ -1,7 +1,7 @@
 {
-  "name": "My-task-gulp-sass-pug",
+  "name": "Promotest.info",
   "version": "1.0.0",
-  "description": "build front end",
+  "description": "promotest.info",
   "main": "gulpfile.js",
   "scripts": {},
   "author": "Konstantin Bogdanov",
@@ -13,6 +13,8 @@
     "css-mqpacker": "^4.0.1",
     "del": "^2.2.1",
     "gulp": "^3.9.1",
+    "gulp-cached": "^1.1.0",
+    "gulp-changed": "^1.3.2",
     "gulp-cleancss": "^0.2.2",
     "gulp-concat": "^2.6.0",
     "gulp-gh-pages": "^0.5.4",
@@ -24,6 +26,7 @@
     "gulp-postcss": "^6.1.0",
     "gulp-prettify": "^0.5.0",
     "gulp-pug": "^3.0.4",
+    "gulp-pug-inheritance": "^0.1.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
@@ -38,9 +41,5 @@
     "vinyl-source-stream": "^1.1.0",
     "vinyl-transform": "^1.0.0"
   },
-  "dependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:cotang/my-frontend-kit.git"
-  }
+  "dependencies": {}
 }
