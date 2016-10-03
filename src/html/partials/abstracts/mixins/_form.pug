@@ -43,7 +43,7 @@ mixin form(items)
             +e.INPUT.input(type='tel', name='Телефон', placeholder='Контактный телефон*')
             p.help-block.help-block-error Ошибка заполнения поля формы
 
-        .form-group.recaptcha
-          +b.captcha
+        //- .form-group.recaptcha
+        //-   +b.captcha
         +b.BUTTON.btn--form(type='submit') #{item.button}
         p.help-block.help-block-success #{item.success}

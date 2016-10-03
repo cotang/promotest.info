@@ -8,7 +8,15 @@
   &__hamburger{
     display: none;
     text-align: center;
+    @include mq($from:xs, $until:md){
+      display: block;
+    }
   }  
+  &__wrapper{
+    @include mq($from:xs, $until:md){
+      display: none;
+    }    
+  }
   &__list{
     font-size: $font-size;
     padding-left: 0;     
@@ -24,14 +32,20 @@
   }
   &__item{
     padding-bottom: 10px;
-    // padding-right: 45px;  
-    // @include mq($from:md, $until:lg){
-    //   padding-right: 30px; 
-    // }
+    padding-left: 20px;
+    padding-right: 20px;
+    &:first-child{
+      padding-left: 0;
+    }
+    @include mq($from:md, $until:lg){
+      padding-left: 10px;
+      padding-right: 10px;
+    }
     @include mq($from:xs, $until:md){
-      // padding-right: 0;
-      padding-bottom: 15px; 
-    }  
+      // display: none;
+      padding: 0 0 15px;
+    }
+ 
     &:hover, &:focus, &:active{
       .nav__link{
         color: $light-blue;
@@ -40,22 +54,7 @@
         display: flex;
       }
     }
-    // &:after{
-    //   position: absolute;
-    //   right: 0;
-    //   top: 0;
-    //   content: "/";
-    //   @include mq($from:xs, $until:md){
-    //     content: "";
-    //   } 
-    // }
-  }
-  // &__item:nth-last-of-type(2){  
-  //   padding-right: 0;      
-  //   &:after{
-  //     content: "";
-  //   }
-  // }  
+  } 
 
   &__slash{
     @include mq($from:xs, $until:md){
@@ -92,7 +91,7 @@
     }
     .nav__item{
       margin: 15px 0;
-      padding-bottom: 0;
+      padding: 0;
       &:after{
         content: "";
       }
@@ -107,12 +106,9 @@
 }
 
 .dropdown-menu{
-  // width: 270px; 
   font-size: $font-size-promo;
   padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: -10px;
+  margin: 0;
   list-style-type: none;
   background-color: $body-bg;
   border: 2px solid $dark-blue;
@@ -122,16 +118,20 @@
   bottom: 15px;
   left: 0;
   transform: translateY(100%);
-  // display: flex;
   flex-wrap: wrap;
   width: 100%;
+  @include mq($from:xs, $until:md){
+    bottom: 5px;
+  }
+
   &__item{
-    width: 20%;
-    padding: 15px 5px;
-    // border-bottom: 1px solid $dark-blue;
-    // &:nth-last-of-type(1){
-    //   border-bottom: none;
-    // }
+    flex: 0 0 20%;
+    max-width: 20%;
+    @include mq($from:xs, $until:lg){
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
     &:hover, &:focus, &:active{
       background-color: $light-blue;
       .dropdown-menu__link{
@@ -142,17 +142,31 @@
   }
   &__link{
     display: inline-block;
-    padding: 0 10px;
+    padding: 15px;
+    // word-wrap: break-word;
+    @include mq($from:xs, $until:lg){
+      padding: 5px;
+      font-size: 0.9em;
+    }
   }  
 }
 
 .search{
   margin-top: -5px;
   position: relative;
+  padding-left: 20px;
+  @include mq($from:md, $until:lg){
+    padding-left: 10px;
+  } 
+  @include mq($from:xs, $until:md){
+    padding-left: 0;
+  } 
+
   &__form{
     @include mq($from:md, $until:xl){
       position: absolute;
       right: 0;
+      display: none;
     }    
     @include mq($from:xs, $until:md){
       position: relative;

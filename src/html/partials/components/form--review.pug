@@ -14,7 +14,7 @@ include ../abstracts/bemto/bemto.pug
     .form-group.field-review-text.required
       +e.TEXTAREA.textarea(type='text', name='Ваш отзыв', placeholder='Ваш отзыв*')
       p.help-block.help-block-error Ошибка заполнения поля формы
-    .form-group.recaptcha
-      +b.captcha
+    //- .form-group.recaptcha
+    //-   +b.captcha
     +b.BUTTON.btn--form(type='submit') Оставить отзыв
     p.help-block.help-block-success Отзыв успешно оставлен

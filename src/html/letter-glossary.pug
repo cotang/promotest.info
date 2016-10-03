@@ -1,0 +1,52 @@
+extends partials/templates/template.pug
+
+block content
+  +b.SECTION.page
+    .container
+      .row
+        .col-xs-12.col-xl-8
+          +b.SECTION.breadcrumbs
+            a(href="index.html") Сертификационный центр Промотест
+            ='>'
+            span Глоссарий
+          // Content
+          +b.SECTION.content
+            +e.H1.title Глоссарий
+            +b.glossary
+              +e.UL.list       
+                +e.item--all Все записи:
+                +e.item
+                  +e.link--active(href="letter-glossary.html") А
+                +e.item
+                  +e.link(href="letter-glossary.html") Б
+                +e.item
+                  +e.SPAN.letter В
+                +e.item
+                  +e.link(href="letter-glossary.html") Г
+                +e.item
+                  +e.link(href="letter-glossary.html") Д
+                +e.item
+                  +e.link(href="letter-glossary.html") Е
+                +e.item
+                  +e.SPAN.letter Э
+                +e.item
+                  +e.SPAN.letter Ю
+                +e.item
+                  +e.link(href="letter-glossary.html") Я
+
+              +b.glossary-item  
+                +e.A.link(href="page.html") Автомобили
+              +b.glossary-item
+                +e.A.link(href="page.html") Алкогольная продукция / Декларирование и сертификация алкогольной продукции
+              +b.glossary-item  
+                +e.A.link(href="page.html") Алюминий
+              +b.glossary-item
+                +e.A.link(href="page.html") Анкер / Сертификат на анкера
+              +b.glossary-item  
+                +e.A.link(href="page.html") Антенна / Сертификат на антенну
+              +b.glossary-item
+                +e.A.link(href="page.html") Асфальт / Сертификат на асфальт
+
+        .col-xs-12.col-md-8.offset-md-2.col-lg-6.offset-lg-3.col-xl-4.offset-xl-0
+          include partials/components/sidebar.pug
+

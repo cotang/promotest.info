@@ -40,11 +40,6 @@ jQuery(document).ready(function($){
     }
     $('.footer__tel-wrapper--tel1').html(tel1Name+': <a class="footer__tel" target="_blank" href="tel:+'+hrefPrefix+hrefTel1+'">'+prefix+'<span>'+tel1+'</span></a>');
 
-    if ($(this).text() == "Новосибирск") {
-      $('.footer__working-hours span:first').html($(this).data("from"));
-      $('.footer__working-hours span:last').html($(this).data("to"));
-    }
-
     var mapRegion = "img/map/" + $(this).data("map");
     $('.location__map-region img').attr({'src': mapRegion, 'alt': $(this).html(), 'title': $(this).html()});
 
@@ -53,25 +48,17 @@ jQuery(document).ready(function($){
   });
 
   /* Hamburger */
-  if ($(window).width() < 768) {
-    var headerNavItem = $('.header .nav__item');
-    $('.nav__hamburger').show();
-    $(headerNavItem).hide(); 
-    $('.hamburger').click(function(e){
-      e.preventDefault();
-      $(this).toggleClass('hamburger--close');
-      $(headerNavItem).toggle();
-    });               
-  }
+  $('.hamburger').click(function(e){
+    e.preventDefault();
+    $(this).toggleClass('hamburger--close');
+    $('.nav__wrapper').toggle();
+  });               
 
   /* Открывание меню поиска по клику на иконку */
-  if ($(window).width() <= 1024) {
-    $('.search__form').hide(); 
-    $('.search__icon').click(function(e){
-      e.preventDefault();
-      $('.search__form').toggle();
-    });               
-  }
+  $('.search__icon').click(function(e){
+    e.preventDefault();
+    $('.search__form').toggle();
+  });               
 
   /* галерея "с нами уже работают" */
   $('.reviews-section__gallery').slick({
@@ -142,10 +129,13 @@ jQuery(document).ready(function($){
     $('.overlay').fadeOut(400);
   }); 
 
-  /* открывание ответа по ссылке "читать далее" */
-  $('.question__details').click(function(e) {
-      e.preventDefault();
-      $(this).closest('.question').find('.question__answer').toggle();      
+  /* Services dropdown */
+  $('.services__item--dropdown').on('mouseenter', function(e) {
+    e.preventDefault(); 
+    $(this).next('.services-dropdown').show();   
+  });
+  $('.services-dropdown').on('mouseleave', function() {
+    $(this).fadeOut();   
   });
 
 });

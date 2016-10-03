@@ -1,8 +1,8 @@
 'use strict';
 
 // Set Env
-// process.env.NODE_ENV = 'development';
-process.env.NODE_ENV = 'production';
+process.env.NODE_ENV = 'development';
+// process.env.NODE_ENV = 'production';
 
 // Check ENV
 global.devBuild = process.env.NODE_ENV !== 'production';
@@ -185,7 +185,7 @@ var config = {
   },
 //  tunnel: true,
   host: 'localhost',
-  port: 9000
+  port: 8000
 };
 // Browser sync
 gulp.task('browserSync', ['build'], function() {

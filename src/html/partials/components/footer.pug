@@ -17,13 +17,13 @@ include news-section.pug
         // Logo
         +b.A.logo(href="index.html") 
           img(src="img/logo.png", alt="logo", title="logo")
-        +e.P.address г. Санкт-Петербург, Станция метро: "Площадь Восстания", 2-я Советская ул., д. 7, 1 эт., оф. 111
+        +e.P.address г. Санкт-Петербург, Станция метро: 'Площадь Восстания', Невский проспект 111/3, лит А, офис 406
         +e.P.contact-info
           +e.email-wrapper E-mail:
-            +e.A.email(href="mailto:info@promotest.info", target="_blank") info@promotest.info
+            +e.A.email(href="mailto:info@promotest.ru", target="_blank") info@promotest.ru
           +e.tel-wrapper--tel1 Тел/факс:    
-            +e.A.tel(href="tel:+78123321705", target="_blank") +7 (812) 
-              span 332-17-05
+            +e.A.tel(href="tel:+78123091992", target="_blank") +7 (812) 
+              span 309-19-92
           +e.tel-wrapper--tel2 Телефон:
             +e.A.tel(href="tel:+78129279450", target="_blank") +7 (812) 
               span 927-94-50
@@ -32,6 +32,7 @@ include news-section.pug
           =" до "
           span 18:00
           =" по местному времени"
+
       .col-xs-6.col-lg-3.col-xl-2.border-right
         // Nav menu
         +b.NAV.nav--footer
@@ -42,58 +43,59 @@ include news-section.pug
             +e.item 
               +e.link(href="page.html") О нас
             +e.item
-              +e.link(href="page.html") Услуги           
+              +e.link(href="index.html") Услуги           
             +e.item
-              +e.link(href="page.html") Сертификация продукции                 
+              +e.link(href="page-glossary.html") Сертификация продукции                 
             +e.item
               +e.link(href="page-contacts.html") Контакты
+
       .col-xs-6.col-md-4.col-lg-3.col-xl-2.border-right
-        +b.SECTION.documents
-          +e.H3.title Документы для
+        +b.SECTION.registry
+          +e.H3.title Реестры
           +e.UL.list
             +e.item 
-              +e.link(href="#") Заграничный паспорт
+              +e.link(href="page.html") Реестр добровольной системы сертификации «Система качества EAC»
             +e.item 
-              +e.link(href="#") Центр юридических услуг
-            +e.item
-              +e.link(href="#") Центр автоуслуг
+              +e.link(href="page.html") Реестр штрих-кодов
             +e.item 
-              +e.link(href="#") Паспорт гражданина РФ
-            +e.item 
-              +e.link(href="#") Комплексная услуга для граждан, сменивших ФИО
-            +e.item
-              +e.link(href="#") Оформление недвижимости  
-          +e.all-link
-            +b.A.all-link--bottom(href="#") Все новости (
-              span 37
-              =" )"                         
+              +e.link(href="page.html") Действующие технические регламенты
+
       .col-xs-6.col-md-4.col-lg-3.col-xl-2.border-right
-        +b.SECTION.documents
-          +e.H3.title Документы
+        +b.SECTION.code-base
+          +e.H3.title Базы кодов
           +e.UL.list
             +e.item 
-              +e.link(href="#") Пункт меню пример
+              +e.link(href="page.html") База кодов ОКУН
             +e.item 
-              +e.link(href="#") Пункт меню пример
+              +e.link(href="page.html") База кодов ОКВЭД
             +e.item
-              +e.link(href="#") Пункт меню пример
+              +e.link(href="page.html") База кодов ТНВЭД
             +e.item 
-              +e.link(href="#") Пункт меню пример
+              +e.link(href="page.html") Коды ОКП
             +e.item 
-              +e.link(href="#") Пункт меню пример
+              +e.link(href="page.html") База кодов ГОСТ
             +e.item
-              +e.link(href="#") Пункт меню пример 
+              +e.link(href="page.html") ОКВЭД2 и ОКПД2 
+            +e.item 
+              +e.link(href="page.html") База кодов МКТУ
+            +e.item
+              +e.link(href="page.html") База кодов ОКПД2 
+
       .col-xs-6.col-sm-12.col-md-4.col-lg-12.col-xl-2
         +b.SECTON.widget-vk 
           +e.inner 
-            span Виджет Вконтакте
-      .col-xs-12
-        +e.copyright Copyright © 2016 promotest.info
+            script(type="text/javascript", src="//vk.com/js/api/openapi.js?130")
+
+            //VK Widget 
+            div(id="vk_groups")
+            script(type="text/javascript")
+              =" VK.Widgets.Group('vk_groups', {mode: 3, width: '180', height: '240', color1: 'FFFFFF', color2: '000000', color3: '5E81A8'}, 113671284);"
+            //- span Виджет Вконтакте
+      //- .col-xs-12
+      //-   +e.copyright Copyright © 2016 promotest.info
 +b.overlay
   +e.form
-    //- include form--application.pug
     include form--question.pug
     include form--call.pug
-
 
 

@@ -1,5 +1,8 @@
 .services{
   text-align: center;
+  &__inner{
+    position: relative;
+  }
 
   &__title{
     margin: 25px 0 45px;
@@ -98,10 +101,15 @@
         border: 1px solid $light-blue; 
         box-shadow: 0 0 10px 3px $light-blue;      
       }
-      .services__type{
-        // font-weight: $semibold;
-      }
     }
+
+    // &:last-of-type{
+    //   &:hover{
+    //     ~ .services-dropdown{
+    //       display: block;
+    //     }
+    //   }
+    // }
   }
   &__icon{
     position: relative;
@@ -118,5 +126,34 @@
   &__type{
     font-size: $font-size-small;
     margin-top: 10px;
+  }
+}
+
+.services-dropdown{
+  display: none;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 50px;
+  background-color: $white;
+  transform: translateY(100%);
+  padding-left: 0;
+  margin: 0;
+  list-style-type: none;
+  padding: 5px 0;
+  text-align: left;
+  border: 1px solid $grey-bg;
+  &__item{
+
+  }
+  &__link{
+    padding: 5px 10px;
+    width: 100%;
+    display: inline-block;
+    font-size: $font-size-small; 
+    &:hover{
+      background-color: $dark-blue;
+      color: $text-color-white;
+    }   
   }
 }
