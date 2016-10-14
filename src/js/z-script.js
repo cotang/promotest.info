@@ -113,7 +113,7 @@ jQuery(document).ready(function($){
   }); 
 
   /* Form in the modal window */
-  $('.btn').click( function(e){
+  $('.btn[data-form]').click( function(e){
     e.preventDefault(); 
     var suffix = $(this).data("form"); 
     var overlay = $('.overlay');
@@ -123,9 +123,10 @@ jQuery(document).ready(function($){
     $(overlay).find(formClass).fadeIn();    
   });
   /* Close the modal window */
-  $('.overlay').click( function(){ 
+  $('.overlay__bg, .form__close').click( function(e){ 
+    e.preventDefault(); 
     $('body').css({"overflow":"auto"});
-    $(this).find(".form").fadeOut();
+    $(this).closest('.overlay').find('.form').fadeOut();
     $('.overlay').fadeOut(400);
   }); 
 
@@ -140,3 +141,20 @@ jQuery(document).ready(function($){
 
 });
 
+  // /* Form in the modal window */
+  // $('.btn[data-form]').click( function(e){
+  //   e.preventDefault(); 
+  //   var suffix = $(this).data("form"); 
+  //   $('body').css({"overflow":"hidden"});   
+  //   $('.modal').show();
+  //   var formClass = '.form--' + suffix;
+  //   $('.modal').find(formClass).fadeIn();
+  // });
+  //  Close the modal window 
+  // $('.modal__overlay, .modal__close').click( function(e){ 
+  //   e.preventDefault();
+  //   $('body').css({"overflow":"auto"});
+  //   // $(this).closest('.modal').find('input, textarea').val('');
+  //   $(this).closest('.modal').find(".form").fadeOut();
+  //   $(this).closest('.modal').fadeOut(400);
+  // }); 

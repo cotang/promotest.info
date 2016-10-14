@@ -60,7 +60,7 @@ include news-section.pug
             +e.item 
               +e.link(href="page.html") Действующие технические регламенты
 
-      .col-xs-6.col-md-4.col-lg-3.col-xl-2.border-right
+      .col-xs-12.col-sm-6.col-md-4.col-lg-3.col-xl-2.border-right
         +b.SECTION.code-base
           +e.H3.title Базы кодов
           +e.UL.list
@@ -81,7 +81,7 @@ include news-section.pug
             +e.item
               +e.link(href="page.html") База кодов ОКПД2 
 
-      .col-xs-6.col-sm-12.col-md-4.col-lg-12.col-xl-2
+      .col-xs-12.col-sm-12.col-md-4.col-lg-12.col-xl-2
         +b.SECTON.widget-vk 
           +e.inner 
             script(type="text/javascript", src="//vk.com/js/api/openapi.js?130")
@@ -94,8 +94,8 @@ include news-section.pug
       //- .col-xs-12
       //-   +e.copyright Copyright © 2016 promotest.info
 +b.overlay
+  +e.bg
   +e.form
     include form--question.pug
     include form--call.pug
-
 

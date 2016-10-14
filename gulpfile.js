@@ -185,7 +185,7 @@ var config = {
   },
 //  tunnel: true,
   host: 'localhost',
-  port: 8000
+  port: 9000
 };
 // Browser sync
 gulp.task('browserSync', ['build'], function() {
