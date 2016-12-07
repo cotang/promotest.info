@@ -13,6 +13,10 @@ include ../abstracts/bemto/bemto.pug
 +b.SECTION.content
   +e.H1.title Наши офисы
   p Оформить сертификат, получить грамотную консультацию вы можете в любом из наших офисов.
+  // Managers
+  include managers.pug
+  +e.content__btn
+    +b.A.btn--vk(target="_blank" href="https://vk.com/promotest_spb") ВКонтакте
   // Offices
   +e.offices
     +office(spb)

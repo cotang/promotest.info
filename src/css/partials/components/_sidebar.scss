@@ -1,7 +1,23 @@
 .sidebar{
   text-align: center;
-  .form--application{
+  &__form{
     margin-top: 30px;
+    margin-bottom: 30px;
+    &--static{
+      position: static;
+    }
+    &--sticky{
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      bottom: auto;
+    }
+    &--absolute{
+      position: absolute;
+      z-index: 1;
+      top: auto;
+      bottom: -20px;      
+    }
   }
   .form__close{
     display: none;

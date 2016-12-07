@@ -47,8 +47,8 @@
     }
   }
   &__tel{
-    span{
-      font-size: $font-size-tel2;
+    font-size: $font-size-tel2;
+    span{      
       color: $light-blue; 
     }
   }
@@ -73,5 +73,6 @@
 
 .logo{
   display: block;
-  margin-top: 10px;  
+  margin-top: 10px; 
+  max-width: 364px; 
 }

@@ -1,23 +1,18 @@
-.location{
+.managers{
   margin-top: 40px;
-  &__map{
-    width: 100%;
-    position: relative;
+  &__title{
+    position: relative;    
+    font-weight: $bold;
+    font-size: $font-size-subtitle;
+    @include mq($from:xs, $until:sm){
+      font-size: $font-size-promo;
+    }
   }
-  &__map-region{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
-
-  &__managers{
-    margin-top: 40px;
+  &__persons{    
     text-align: left;
-    @include mq($from:xs, $until:xl){
-      text-align: center;
-    }     
+    // @include mq($from:xs, $until:md){
+    //   text-align: center;
+    // }     
   }
 }
 .manager{ 

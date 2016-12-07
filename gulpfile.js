@@ -226,5 +226,3 @@ gulp.task('deploy', function() {
 
 // Default task
 gulp.task('default', ['watch']);
-
-

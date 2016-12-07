@@ -84,10 +84,11 @@
   &--footer{
     margin-top: 20px;
     border-bottom: none;
-    font-size: $font-size-content;
+    
     .nav__list{
       display: block;
       text-align: left;
+      font-size: $font-size-content;
     }
     .nav__item{
       margin: 15px 0;
@@ -226,6 +227,7 @@
 
 
 .hamburger{
+  transition: none;
   display: inline-block;
   margin-top: 10px;
   margin-bottom: 10px;

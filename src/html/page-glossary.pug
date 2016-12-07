@@ -13,7 +13,7 @@ block content
           +b.SECTION.content
             +e.H1.title Сертификация продукции
             +b.glossary
-              +e.H2.title Глоссарий
+              //- +e.H2.title Глоссарий
               +e.UL.list       
                 +e.item--all Все записи:
                 +e.item
@@ -53,7 +53,10 @@ block content
               p Центр сертификации «Промотест» осуществляет выдачу разрешительных документов Госстандарта и других контролирующих систем.
 
         .col-xs-12.col-md-8.offset-md-2.col-lg-6.offset-lg-3.col-xl-4.offset-xl-0
-          include partials/components/sidebar.pug
+          // Sidebar
+          +b.ASIDE.sidebar
+            +e.form
+              include partials/components/form--application.pug
 
 
 

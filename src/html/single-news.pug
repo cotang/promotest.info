@@ -22,7 +22,10 @@ block content
                 p Напомним, что до 7 марта только один вид цемента подлежал обязательной оценке соответствия, а именно – декларированию в системе ТР ТС. Это цемент, который применяется для строительства, реконструкции автодорог и их элементов (применяется с января 2015 года).
 
         .col-xs-12.col-md-8.offset-md-2.col-lg-6.offset-lg-3.col-xl-4.offset-xl-0
-          include partials/components/sidebar.pug
+          // Sidebar
+          +b.ASIDE.sidebar
+            +e.form
+              include partials/components/form--application.pug
 
 
 

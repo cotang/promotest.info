@@ -1,4 +1,4 @@
-.pagination{
+.glossary{
   text-align: left;
   color: $text-color;
   margin-top: 20px;
@@ -14,22 +14,14 @@
     display: inline-block;
     list-style-type: none;
   }
-
-  &__number{
+  &__item{
     display: inline-block;
-    
-    &--current{      
-      .pagination__link{
-        background-color: $text-color;
-        color: $white;
-        &:hover, &:focus, &:active{
-          color: $white;
-        }
-      }
+    padding: 5px 10px;
+    &--all{
+      padding: 5px 10px 5px 0;
     }
   }
   &__link{
-    padding: 5px 10px;
     color: $text-color;
     &:hover, &:focus, &:active{
       color: $dark-blue;

@@ -11,39 +11,38 @@ mixin form(items)
         +e.H3.title #{item.title}
 
         if item.application
-          .form-group.field-question-production.required
+          .form-group.field-production
             +e.INPUT.input(type='text', name='Продукция', placeholder='Наименование продукции*') 
             p.help-block.help-block-error Ошибка заполнения поля формы
-          .form-group.field-question-name.required.has-error
+          .form-group.field-name
             +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя*')
             p.help-block.help-block-error Ошибка заполнения поля формы
-          .form-group.field-question-email.required.has-success
+          .form-group.field-email
             +e.INPUT.input(type='email', name='Email', placeholder='Ваш e-mail*')
             p.help-block.help-block-error Ошибка заполнения поля формы
-          .form-group.field-question-phone
+          .form-group.field-phone.required
             +e.INPUT.input(type='tel', name='Телефон', placeholder='Контактный телефон')
             p.help-block.help-block-error Ошибка заполнения поля формы            
 
         if item.question
-          .form-group.field-question-name.required.has-error
+          .form-group.field-name
             +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя*')
             p.help-block.help-block-error Ошибка заполнения поля формы
-          .form-group.field-question-email.required.has-success
+          .form-group.field-email
             +e.INPUT.input(type='email', name='Email', placeholder='Ваш e-mail*')
             p.help-block.help-block-error Ошибка заполнения поля формы
-          .form-group.required
+          .form-group.field-question.required
             +e.TEXTAREA.textarea(type='text', name='Ваш вопрос', placeholder='Ваш вопрос*')
             p.help-block.help-block-error Ошибка заполнения поля формы
 
         if item.call
-          .form-group.field-question-name.required.has-error
+          .form-group.field-name
             +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя*')
             p.help-block.help-block-error Ошибка заполнения поля формы
-          .form-group.field-question-phone.required.has-success
+          .form-group.field-phone.required
             +e.INPUT.input(type='tel', name='Телефон', placeholder='Контактный телефон*')
             p.help-block.help-block-error Ошибка заполнения поля формы
 
-        //- .form-group.recaptcha
-        //-   +b.captcha
-        +b.BUTTON.btn--form(type='submit') #{item.button}
-        p.help-block.help-block-success #{item.success}
+        .form-group
+          +b.BUTTON.btn--form(type='submit') #{item.button}
+          p.help-block.help-block-success #{item.success}
