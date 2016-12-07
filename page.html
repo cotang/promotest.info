@@ -38,6 +38,7 @@
     <link rel="shortlink" href="#">
     <link type="text/plain" rel="author" href="humans.txt">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   </head>
@@ -49,7 +50,7 @@
           <div class="col-xs-12 col-sm-6 col-md-4 col-xl-4">
             <!-- Logo-->
             <a class="logo" href="index.html">
-              <img src="img/logo.png" alt="logo" title="logo">
+              <img src="img/logo.svg" alt="logo" title="logo">
             </a>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-3 col-xl-4">
@@ -60,14 +61,13 @@
                 <a href="#">выбрать другой город</a>
               </div>
               <ul class="city__dropdown">
-                <li class="city__item" data-email="info@promotest.ru" data-address="Станция метро: 'Площадь Восстания', Невский проспект 111/3, лит А, офис 406" data-prefix="+7 (812) " data-tel1="309-19-92" data-tel2="927-94-50" data-map="map-spb.png">Санкт-Петербург</li>
-                <li class="city__item" data-email="77@promotest.ru" data-address="Станции метро: 'Таганская' / 'Марксистская', ул. А. Солженицына, д. 11, стр. 1, офис 5" data-prefix="+7 (495) " data-tel1="783-29-26" data-tel2="669-16-05"
-                  data-map="map-msk.png">Москва</li>
-                <li class="city__item" data-email="ural@promotest.ru" data-address="ул. Розы Люксембург, д. 51" data-prefix="+7 (343) " data-tel1="253-28-14" data-map="map-ekb.png">Екатеринбург</li>
+                <li class="city__item" data-email="info@promotest.ru" data-address="Станция метро: 'Площадь Восстания', Невский проспект 111/3, лит А, офис 406" data-prefix="+7 (812) " data-tel1="309-19-92" data-tel2="927-94-50">Санкт-Петербург</li>
+                <li class="city__item" data-email="77@promotest.ru" data-address="Станции метро: 'Таганская' / 'Марксистская', ул. А. Солженицына, д. 11, стр. 1, офис 5" data-prefix="+7 (495) " data-tel1="783-29-26" data-tel2="669-16-05">Москва</li>
+                <li class="city__item" data-email="ural@promotest.ru" data-address="ул. Розы Люксембург, д. 51" data-prefix="+7 (343) " data-tel1="253-28-14">Екатеринбург</li>
                 <li class="city__item" data-email="23@promotest.ru" data-address="ул. Северная, д. 319" data-prefix="+7 (861) " data-tel1="944-13-65" data-map="map-krasnodar.png">Краснодар</li>
-                <li class="city__item" data-email="kazan@promotest.ru" data-address="ул. Право-Булачная, д. 13" data-prefix="+7 (843) " data-tel1="258-56-07" data-map="map-kazan.png">Казань</li>
+                <li class="city__item" data-email="kazan@promotest.ru" data-address="ул. Право-Булачная, д. 13" data-prefix="+7 (843) " data-tel1="258-56-07">Казань</li>
                 <li class="city__item" data-email="61@promotest.ru" data-address="Буденновский пр., д. 62/2" data-prefix="+7 (863) " data-tel1="294-99-51" data-map="map-rostov.png">Ростов-на-Дону</li>
-                <li class="city__item" data-email="351@promotest.ru" data-address="ул. Карла Маркса, д. 54" data-prefix="+7 (351) " data-tel1="247-10-02" data-map="map-chelyabinsk.png">Челябинск</li>
+                <li class="city__item" data-email="351@promotest.ru" data-address="ул. Карла Маркса, д. 54" data-prefix="+7 (351) " data-tel1="247-10-02">Челябинск</li>
               </ul>
             </div>
           </div>
@@ -262,67 +262,35 @@
             <div class="col-xs-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-0">
               <!-- Sidebar-->
               <aside class="sidebar">
-                <div class="sidebar__form-application">
+                <div class="sidebar__form">
                   <!-- Form application-->
                   <section class="form form--application">
                     <form action="" method="" id="formApplication">
                       <a class="form__close" href="#">Закрыть</a>
                       <h3 class="form__title">Заказать документ</h3>
-                      <div class="form-group field-question-production required">
+                      <div class="form-group field-production">
                         <input class="form__input" type="text" name="Продукция" placeholder="Наименование продукции*" />
                         <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
                       </div>
-                      <div class="form-group field-question-name required has-error">
+                      <div class="form-group field-name">
                         <input class="form__input" type="text" name="Имя" placeholder="Ваше имя*" />
                         <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
                       </div>
-                      <div class="form-group field-question-email required has-success">
+                      <div class="form-group field-email">
                         <input class="form__input" type="email" name="Email" placeholder="Ваш e-mail*" />
                         <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
                       </div>
-                      <div class="form-group field-question-phone">
+                      <div class="form-group field-phone required">
                         <input class="form__input" type="tel" name="Телефон" placeholder="Контактный телефон" />
                         <p class="help-block help-block-error">Ошибка заполнения поля формы </p>
                       </div>
-                      <button class="btn btn--form" type="submit">Заказать</button>
-                      <p class="help-block help-block-success">Ваша заявка отправлена</p>
+                      <div class="form-group">
+                        <button class="btn btn--form" type="submit">Заказать</button>
+                        <p class="help-block help-block-success">Ваша заявка отправлена</p>
+                      </div>
                     </form>
                   </section>
                 </div>
-                <!-- Location-->
-                <section class="location">
-                  <div class="location__map">
-                    <div class="location__map-initial">
-                      <img src="img/map/map-initial.png" alt="map" title="map">
-                    </div>
-                    <div class="location__map-region">
-                      <img src="img/map/map-spb.png" alt="spb" title="spb">
-                    </div>
-                  </div>
-                  <div class="location__managers">
-                    <div class="manager">
-                      <h3 class="manager__name">Юлия Беляева</h3>
-                      <a class="manager__icq" href="http://www.icq.com/whitepages/cmd.php?uin=622-648-814&amp;amp;action=message">622-648-814</a>
-                      <a class="manager__skype" href="skype:skype01">skype01</a>
-                    </div>
-                    <div class="manager">
-                      <h3 class="manager__name">Анна Омельчук</h3>
-                      <a class="manager__icq" href="http://www.icq.com/whitepages/cmd.php?uin=668-566-902&amp;amp;action=message">668-566-902</a>
-                      <a class="manager__skype" href="skype:skype03">skype03</a>
-                    </div>
-                    <div class="manager">
-                      <h3 class="manager__name">Алина Шевкунова</h3>
-                      <a class="manager__icq" href="http://www.icq.com/whitepages/cmd.php?uin=672-866-195&amp;amp;action=message">672-866-195</a>
-                      <a class="manager__skype" href="skype:skype04">skype04</a>
-                    </div>
-                    <div class="manager">
-                      <h3 class="manager__name">Юлиана Титова</h3>
-                      <a class="manager__icq" href="http://www.icq.com/whitepages/cmd.php?uin=680-607-244&amp;amp;action=message">680-607-244</a>
-                      <a class="manager__skype" href="skype:skype05">skype05</a>
-                    </div>
-                  </div>
-                </section>
-                <a class="btn btn--vk" target="_blank" href="https://vk.com/promotest_spb">ВКонтакте</a>
               </aside>
             </div>
           </div>
@@ -623,18 +591,6 @@
                 </h3>
                 <div class="questions-section__reply">Теперь все россияне без исключения (в том числе и дети) при желании смогут получить второй действующий заграничный паспорт.</div>
               </li>
-              <li class="questions-section__item">
-                <h3 class="questions-section__subtitle">
-                  <a class="questions-section__link" href="single-question.html">Кто может получить второй действующий заграничный паспорт? </a>
-                </h3>
-                <div class="questions-section__reply">Теперь все россияне без исключения (в том числе и дети) при желании смогут получить второй действующий заграничный паспорт.</div>
-              </li>
-              <li class="questions-section__item">
-                <h3 class="questions-section__subtitle">
-                  <a class="questions-section__link" href="single-question.html">Кто может получить второй действующий заграничный паспорт? </a>
-                </h3>
-                <div class="questions-section__reply">Теперь все россияне без исключения (в том числе и дети) при желании смогут получить второй действующий заграничный паспорт.</div>
-              </li>
             </ul>
             <div class="questions-section__ask-yourself">Задать свой вопрос в эту рубрику</div>
             <div class="questions-section__btn">
@@ -713,7 +669,7 @@
               </ul>
             </section>
           </div>
-          <div class="col-xs-12 col-md-4 col-lg-3 col-xl-2 border-right">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 border-right">
             <section class="code-base">
               <h3 class="code-base__title">Базы кодов</h3>
               <ul class="code-base__list">
@@ -775,20 +731,22 @@
           <form action="" method="" id="formQuestion">
             <a class="form__close" href="#">Закрыть</a>
             <h3 class="form__title">Задать вопрос</h3>
-            <div class="form-group field-question-name required has-error">
+            <div class="form-group field-name">
               <input class="form__input" type="text" name="Имя" placeholder="Ваше имя*" />
               <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
             </div>
-            <div class="form-group field-question-email required has-success">
+            <div class="form-group field-email">
               <input class="form__input" type="email" name="Email" placeholder="Ваш e-mail*" />
               <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
             </div>
-            <div class="form-group required">
+            <div class="form-group field-question required">
               <textarea class="form__textarea" type="text" name="Ваш вопрос" placeholder="Ваш вопрос*"></textarea>
               <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
             </div>
-            <button class="btn btn--form" type="submit">Спросить</button>
-            <p class="help-block help-block-success">Ваш вопрос отправлен</p>
+            <div class="form-group">
+              <button class="btn btn--form" type="submit">Спросить</button>
+              <p class="help-block help-block-success">Ваш вопрос отправлен</p>
+            </div>
           </form>
         </section>
         <!-- Form call-->
@@ -796,16 +754,18 @@
           <form action="" method="" id="formCall">
             <a class="form__close" href="#">Закрыть</a>
             <h3 class="form__title">Заказать звонок</h3>
-            <div class="form-group field-question-name required has-error">
+            <div class="form-group field-name">
               <input class="form__input" type="text" name="Имя" placeholder="Ваше имя*" />
               <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
             </div>
-            <div class="form-group field-question-phone required has-success">
+            <div class="form-group field-phone required">
               <input class="form__input" type="tel" name="Телефон" placeholder="Контактный телефон*" />
               <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
             </div>
-            <button class="btn btn--form" type="submit">Заказать звонок</button>
-            <p class="help-block help-block-success">Ваша заявка отправлена</p>
+            <div class="form-group">
+              <button class="btn btn--form" type="submit">Заказать звонок</button>
+              <p class="help-block help-block-success">Ваша заявка отправлена</p>
+            </div>
           </form>
         </section>
       </div>
