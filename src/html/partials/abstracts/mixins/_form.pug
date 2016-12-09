@@ -25,23 +25,23 @@ mixin form(items)
             p.help-block.help-block-error Ошибка заполнения поля формы            
 
         if item.question
-          .form-group.field-name
+          .form-group.field-name.required
             +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя*')
             p.help-block.help-block-error Ошибка заполнения поля формы
-          .form-group.field-email
+          .form-group.field-email.required
             +e.INPUT.input(type='email', name='Email', placeholder='Ваш e-mail*')
             p.help-block.help-block-error Ошибка заполнения поля формы
           .form-group.field-question.required
             +e.TEXTAREA.textarea(type='text', name='Ваш вопрос', placeholder='Ваш вопрос*')
             p.help-block.help-block-error Ошибка заполнения поля формы
 
-        if item.call
-          .form-group.field-name
-            +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя*')
-            p.help-block.help-block-error Ошибка заполнения поля формы
-          .form-group.field-phone.required
-            +e.INPUT.input(type='tel', name='Телефон', placeholder='Контактный телефон*')
-            p.help-block.help-block-error Ошибка заполнения поля формы
+        //- if item.call
+        //-   .form-group.field-name
+        //-     +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя*')
+        //-     p.help-block.help-block-error Ошибка заполнения поля формы
+        //-   .form-group.field-phone.required
+        //-     +e.INPUT.input(type='tel', name='Телефон', placeholder='Контактный телефон*')
+        //-     p.help-block.help-block-error Ошибка заполнения поля формы
 
         .form-group
           +b.BUTTON.btn--form(type='submit') #{item.button}

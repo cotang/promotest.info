@@ -20,19 +20,21 @@
     
     &--current{      
       .pagination__link{
-        background-color: $text-color;
-        color: $white;
+        color: $dark-blue;
+        text-decoration: none;
         &:hover, &:focus, &:active{
-          color: $white;
+          color: $dark-blue;
         }
       }
     }
   }
   &__link{
-    padding: 5px 10px;
+    padding: 5px 5px;
     color: $text-color;
+    text-decoration: underline;
     &:hover, &:focus, &:active{
-      color: $dark-blue;
+      text-decoration: none;
+      color: $text-color;
     }    
   } 
 }

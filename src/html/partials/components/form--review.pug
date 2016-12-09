@@ -5,13 +5,13 @@ include ../abstracts/bemto/bemto.pug
   form(action='', method='', id= 'formReview')
     //- +e.A.close(href='#') Закрыть
     +e.H3.title Оставить отзыв
-    .form-group.field-name
+    .form-group.field-name.required
       +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя*')
       p.help-block.help-block-error Ошибка заполнения поля формы
-    .form-group.field-email
+    .form-group.field-email.required
       +e.INPUT.input(type='email', name='Email', placeholder='Ваш e-mail*')
       p.help-block.help-block-error Ошибка заполнения поля формы
-    .form-group.field-text
+    .form-group.field-text.required
       +e.TEXTAREA.textarea(type='text', name='Ваш отзыв', placeholder='Ваш отзыв*')
       p.help-block.help-block-error Ошибка заполнения поля формы
     .form-group

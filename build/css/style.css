@@ -1104,15 +1104,17 @@ h4 {
   .pagination__number {
     display: inline-block; }
     .pagination__number--current .pagination__link {
-      background-color: #010101;
-      color: #f6f8f9; }
+      color: #314b66;
+      text-decoration: none; }
       .pagination__number--current .pagination__link:hover, .pagination__number--current .pagination__link:focus, .pagination__number--current .pagination__link:active {
-        color: #f6f8f9; }
+        color: #314b66; }
   .pagination__link {
-    padding: 5px 10px;
-    color: #010101; }
+    padding: 5px 5px;
+    color: #010101;
+    text-decoration: underline; }
     .pagination__link:hover, .pagination__link:focus, .pagination__link:active {
-      color: #314b66; }
+      text-decoration: none;
+      color: #010101; }
 
 .btn {
   display: inline-block;
@@ -1144,7 +1146,7 @@ h4 {
     background-image: linear-gradient(0deg, #d7d7d7 0%, #2e4d66 0%, #6a8eb3 100%);
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
     border-radius: 22px;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 20px; }
     .btn--vk:before {
       content: "";
@@ -1638,7 +1640,10 @@ h4 {
 
 .manager__name {
   font-weight: 400;
-  font-size: 18px; }
+  font-size: 18px;
+  display: inline-block;
+  margin: 10px 20px 10px 0;
+  min-width: 160px; }
 
 .manager__icq {
   display: inline-block;
@@ -2071,6 +2076,7 @@ h4 {
       margin: 0 5px; }
   .form__textarea {
     margin-bottom: 20px;
+    vertical-align: top;
     color: #314b66;
     background-color: #f6f8f9;
     font-size: 13px;
