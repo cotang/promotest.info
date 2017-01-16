@@ -933,8 +933,8 @@ h4 {
 .sidebar {
   text-align: center; }
   .sidebar__form {
-    margin-top: 30px;
-    margin-bottom: 30px; }
+    padding-top: 30px;
+    padding-bottom: 30px; }
     .sidebar__form--static {
       position: static; }
     .sidebar__form--sticky {

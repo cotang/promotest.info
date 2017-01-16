@@ -24,24 +24,17 @@ jQuery(document).ready(function($){
       $('.footer__address').hide();
     }
 
-    var prefix = $(this).data("prefix");
-    var hrefPrefix = prefix.replace(/\D/g, "");
-    var tel1 = $(this).data("tel1");
-    var hrefTel1 = tel1.replace(/\D/g, "");
-    $('.header__tel-wrapper').html('<a class="header__tel" target="_blank" href="tel:+'+hrefPrefix+hrefTel1+'">'+prefix+'<span>'+tel1+'</span></a>');
-    var tel1Name = "Телефон";    
-    if ($(this).data("tel2") !== undefined) {
-      var tel2 = $(this).data("tel2");
-      var hrefTel2 = tel2.replace(/\D/g, "");
+    var tel0 = $(this).data("tel0");
+    $('.header__tel-wrapper').html('<a class="header__tel" target="_blank" href="tel:+'+tel0+'">'+tel0+'</a>');
+    var tel0Name = "Телефон";    
+    if ($(this).data("tel1") !== undefined) {
+      var tel1 = $(this).data("tel1");
       var tel1Name = "Тел/факс";      
-      $('.footer__tel-wrapper--tel2').html('Телефон: <a class="footer__tel" target="_blank" href="tel:+'+hrefPrefix+hrefTel2+'">'+prefix+'<span>'+tel2+'</span></a>');
+      $('.footer__tel-wrapper--tel1').html('Телефон: <a class="footer__tel" target="_blank" href="tel:+'+tel1+'">'+tel1+'</a>');
     } else {
-      $('.footer__tel-wrapper--tel2').hide();
+      $('.footer__tel-wrapper--tel1').hide();
     }
-    $('.footer__tel-wrapper--tel1').html(tel1Name+': <a class="footer__tel" target="_blank" href="tel:+'+hrefPrefix+hrefTel1+'">'+prefix+'<span>'+tel1+'</span></a>');
-
-    // var mapRegion = "img/map/" + $(this).data("map");
-    // $('.location__map-region img').attr({'src': mapRegion, 'alt': $(this).html(), 'title': $(this).html()});
+    $('.footer__tel-wrapper--tel0').html(tel0Name+': <a class="footer__tel" target="_blank" href="tel:+'+tel0+'">'+tel0+'</a>');
 
     $('.city__dropdown').hide(); 
     return false;
