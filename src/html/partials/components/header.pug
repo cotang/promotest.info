@@ -42,10 +42,8 @@ include ../abstracts/bemto/bemto.pug
             +e.UL.list
               +e.item 
                 +e.A.link--active(href="index.html") Главная
-              +e.slash / 
               +e.item 
                 +e.A.link(href="page.html") О нас
-              +e.slash / 
               +e.item
                 +e.A.link(href="javascript:void(0);") Услуги
                 +b.UL.dropdown-menu
@@ -107,15 +105,13 @@ include ../abstracts/bemto/bemto.pug
                     +e.A.link(href="page.html") Лицензия на фармацевтическую деятельность
                   +e.item 
                     +e.A.link(href="page.html") Лицензия на продажу алкоголя 
-              +e.slash / 
               +e.item
-                +e.A.link(href="page-glossary.html") Сертификация продукции
-              +e.slash /                 
+                +e.A.link(href="page-glossary.html") Сертификация продукции           
               +e.item
                 +e.A.link(href="page-contacts.html") Контакты
-              +e.slash / 
-              +b.search
-                +e.FORM.form
-                  +e.INPUT.input(type='text', name='Поиск', placeholder='поиск')
-                +e.A.icon(href="javascript:void(0);") 
+          +b.search
+            +e.inner
+              +e.FORM.form
+                +e.INPUT.input(type='text', name='Поиск', placeholder='поиск')
+            +e.A.icon(href="javascript:void(0);") 
 

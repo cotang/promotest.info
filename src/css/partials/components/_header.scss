@@ -48,8 +48,9 @@
   }
   &__tel{
     font-size: $font-size-tel2;
+    color: $light-blue;
     span{      
-      color: $light-blue; 
+      // color: $light-blue; 
     }
   }
 

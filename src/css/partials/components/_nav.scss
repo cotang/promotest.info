@@ -1,18 +1,25 @@
 .nav{
   padding-bottom: 10px;
   border-bottom: 2px solid $dark-blue;
+  display: flex;
+  // flex-wrap: wrap;
   @include mq($from:xs, $until:md){
     border-bottom: none;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   &__hamburger{
     display: none;
+    flex: 0 0 100%;
     text-align: center;
     @include mq($from:xs, $until:md){
       display: block;
+
     }
   }  
   &__wrapper{
+    flex: 1 1 auto;
     @include mq($from:xs, $until:md){
       display: none;
     }    
@@ -31,9 +38,21 @@
     }     
   }
   &__item{
+    flex: 1 1 auto;
     padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+    position: relative;
+    &:after{
+      content:'/';
+      position: absolute;
+      right: 0;
+      top: 0;
+      @include mq($from:xs, $until:md){
+        display: none;
+      }
+    }
+
     &:first-child{
       padding-left: 0;
     }
@@ -55,12 +74,6 @@
       }
     }
   } 
-
-  &__slash{
-    @include mq($from:xs, $until:md){
-      display: none;
-    }    
-  }
 
   &__link{
     padding-top: 10px;
@@ -115,7 +128,7 @@
   border: 2px solid $dark-blue;
   display: none;
   position: absolute;
-  z-index: 2;
+  z-index: 4;
   bottom: 15px;
   left: 0;
   transform: translateY(100%);
@@ -144,7 +157,6 @@
   &__link{
     display: inline-block;
     padding: 15px;
-    // word-wrap: break-word;
     @include mq($from:xs, $until:lg){
       padding: 5px;
       font-size: 0.9em;
@@ -153,21 +165,36 @@
 }
 
 .search{
+  flex: 0 0 auto;
+  min-width: 15px;
   margin-top: -5px;
   position: relative;
-  padding-left: 20px;
+  margin-left: 20px;
+
   @include mq($from:md, $until:lg){
-    padding-left: 10px;
+    margin-left: 10px;
   } 
   @include mq($from:xs, $until:md){
-    padding-left: 0;
+    margin-left: 0;
+    flex: 0 0 100%;
+    text-align: center;
   } 
 
+  &__inner{
+    width: 380px;
+    @include mq($from:xs, $until:xl){
+      width: 260px;
+      display: none;
+    } 
+    @include mq($from:xs, $until:md){
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
   &__form{
     @include mq($from:md, $until:xl){
       position: absolute;
       right: 0;
-      display: none;
     }    
     @include mq($from:xs, $until:md){
       position: relative;
@@ -184,7 +211,7 @@
     border-radius: 20px;
     box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.36);
     @include mq($from:xs, $until:xl){
-      width: 300px;
+      width: 260px;
     }    
     &:hover, &:focus{
       outline: none;
@@ -220,7 +247,8 @@
       position: relative;
       transform: none;
       display: inline-block;
-            
+      // margin-left: auto;
+      // margin-right: auto;      
     }       
   }
 }

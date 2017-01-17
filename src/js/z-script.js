@@ -48,10 +48,12 @@ jQuery(document).ready(function($){
   });               
 
   /* Открывание меню поиска по клику на иконку */
-  $('.search__icon').click(function(e){
-    e.preventDefault();
-    $('.search__form').toggle();
-  });               
+  if ($(window).width() <= 1024) {
+    $('.search__icon').click(function(e){
+      e.preventDefault();
+      $('.search__inner').toggle();
+    });
+  }               
 
   /* галерея "с нами уже работают" */
   $('.reviews-section__gallery').slick({
