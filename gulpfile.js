@@ -120,8 +120,8 @@ gulp.task('sass', function () {
 gulp.task('js', function() {
   return gulp.src(path.src.js)
 //    .pipe(gulpif(devBuild, sourcemaps.init()))
-    .pipe(concat('script.min.js'))
-    .pipe(uglify())
+    .pipe(concat('script.js'))
+    // .pipe(uglify())
 //    .pipe(gulpif(devBuild, sourcemaps.write()))
     .pipe(gulp.dest(path.build.js))
     .pipe(reload({stream: true}));

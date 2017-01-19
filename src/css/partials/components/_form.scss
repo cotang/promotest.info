@@ -5,10 +5,6 @@
   position: relative;
   color: $text-color-white;
 
-  // @include mq($from:xs, $until:sm){
-  //   padding: 0 20px;
-  // } 
-
   &__close{
     position: absolute;
     top: 0;
@@ -86,5 +82,76 @@
   &__time-text{
     font-size: $font-size-small;
   }  
+}
+
+.form{
+  /* mcc form */
+  form.mcc-form .mcc_captcha_block{
+    float: none;
+    margin: 20px auto;
+  }
+  .mcc-submit{
+    display: inline-block;
+    border: none;
+    outline: none;
+    border-radius: 8px; 
+    background-color: $body-bg;
+    border-color: $btn-border;
+    box-shadow: 0px 2px 4px 0px $btn-box-shadow, inset 0px 3px 0px 0px rgba(255, 255, 255, 0.25);
+    color: $dark-blue;
+    font-size: $font-size-promo;
+    font-weight: 700;   
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    &:hover, &:focus, &:active{
+      text-decoration: none;
+        color: $dark-blue;
+        box-shadow: 0 0 7px 1px $text-color-white;
+    }
+  }
+  .mcc-form-textarea, .mcc-text{
+    max-height: 130px;
+    vertical-align: top;
+  }
+  form.mcc-form input, form.mcc-form textarea{
+    padding: 5px 20px;
+    width: 100%;
+    &::-webkit-input-placeholder{
+      color: $dark-blue !important;        
+    }       
+    &::placeholder{
+      color: $dark-blue !important;         
+    }
+    &:focus::-webkit-input-placeholder{
+      color: transparent !important;         
+    }       
+    &:focus::placeholder{
+      color: transparent !important;         
+    } 
+  }
+  form.mcc-form table{
+    min-width: initial;
+  }
+
+
+  &--application{
+    form.mcc-form .mcc-value input{
+      padding: 5px 40px;
+      margin: 10px 0; 
+    }
+  }
+  &--review{
+    form.mcc-form {
+      padding: 0 15px; 
+    } 
+    form.mcc-form input[type='submit']{
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }  
+  }
+}
+
+.recaptcha > div{
+  margin: 0 auto;
 }
 

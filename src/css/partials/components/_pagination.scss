@@ -1,4 +1,5 @@
 .pagination{
+  display: inline-block;
   text-align: left;
   color: $text-color;
   margin-top: 20px;
@@ -37,4 +38,12 @@
       color: $text-color;
     }    
   } 
+}
+
+.page-numbers{
+  padding: 5px;
+  color: #010101;
+}
+a.page-numbers{
+  text-decoration: underline;
 }

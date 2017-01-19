@@ -1,18 +1,20 @@
 .managers{
-  margin-top: 40px;
+  // margin-top: 40px;
   &__title{
-    position: relative;    
-    font-weight: $bold;
-    font-size: $font-size-subtitle;
-    @include mq($from:xs, $until:sm){
-      font-size: $font-size-promo;
-    }
+    margin: 0;
+    padding: 10px 0;
+    font-size: $font-size-title;
+    color: $dark-blue;
+    font-weight: $semibold;
+    // position: relative;    
+    // font-weight: $bold;
+    // font-size: $font-size-subtitle;
+    // @include mq($from:xs, $until:sm){
+    //   font-size: $font-size-promo;
+    // }
   }
   &__persons{    
     text-align: left;
-    // @include mq($from:xs, $until:md){
-    //   text-align: center;
-    // }     
   }
 }
 .manager{ 
@@ -42,4 +44,13 @@
       @include sprite($s-contacts-skype);
     }
   }
+}
+
+.mcc_form_icq_group_block{
+  display: flex;
+  flex-wrap: wrap;
+}
+.mcc_form_icq_element_skype{
+  order: -1;
+  margin-right: 10px;
 }

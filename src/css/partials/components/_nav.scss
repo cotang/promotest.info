@@ -1,8 +1,8 @@
 .nav{
-  padding-bottom: 10px;
+  // padding-bottom: 10px;
   border-bottom: 2px solid $dark-blue;
   display: flex;
-  // flex-wrap: wrap;
+  align-items: center;
   @include mq($from:xs, $until:md){
     border-bottom: none;
     justify-content: center;
@@ -15,7 +15,6 @@
     text-align: center;
     @include mq($from:xs, $until:md){
       display: block;
-
     }
   }  
   &__wrapper{
@@ -35,66 +34,123 @@
     @include mq($from:xs, $until:md){
       display: block;
       text-align: center;
-    }     
+    }
   }
   &__item{
     flex: 1 1 auto;
-    padding-bottom: 10px;
-    padding-left: 35px;
-    padding-right: 35px;
-    position: relative;
-    &:after{
-      content:'/';
-      position: absolute;
-      right: 0;
-      top: 0;
-      @include mq($from:xs, $until:md){
-        display: none;
+
+    &:first-child{
+      > a{
+        padding-left: 0;
       }
     }
 
-    &:first-child{
-      padding-left: 0;
+    &:hover, &:focus, &:active{
+      > a{
+        color: $light-blue;
+      }    
+      .dropdown-menu, .sub-menu{
+        display: flex;
+      }
     }
+  }
+  &__item--active{
+    > a{
+      border-bottom: 5px solid $light-blue;
+    }
+  }
+
+  &__link{
+    display: inline-block;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+    position: relative;
     @include mq($from:md, $until:lg){
       padding-left: 10px;
       padding-right: 10px;
     }
     @include mq($from:xs, $until:md){
-      // display: none;
       padding: 0 0 15px;
     }
- 
+    &:after{
+      content:'/';
+      position: absolute;
+      right: 0;
+      top: 0.5em;
+      @include mq($from:xs, $until:md){
+        display: none;
+      }
+    }
+    @include mq($from:xs, $until:md){
+      padding-bottom: 5px;
+    }
+  }
+  /* for wordpress */
+  .nav__list > li{
+    &:first-child{
+      > a{
+        padding-left: 0;
+      }
+    }
     &:hover, &:focus, &:active{
-      .nav__link{
+      > a{
         color: $light-blue;
       }    
-      .dropdown-menu{
+      .dropdown-menu, .sub-menu{
         display: flex;
       }
     }
-  } 
-
-  &__link{
+  }
+  .nav__list > li > a {
+    display: inline-block;
+    width: 100%;
     padding-top: 10px;
     padding-bottom: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+    position: relative;
+    @include mq($from:md, $until:lg){
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    @include mq($from:xs, $until:md){
+      padding: 0 0 15px;
+    }
+    &:after{
+      content:'/';
+      position: absolute;
+      right: 0;
+      top: 0.5em;
+      @include mq($from:xs, $until:md){
+        display: none;
+      }
+    }
     @include mq($from:xs, $until:md){
       padding-bottom: 5px;
-    } 
-    &--active{
-      border-bottom: 5px solid $light-blue; 
     }
   }
+  .nav__list .current_page_item > a{
+    border-bottom: 5px solid $light-blue;
+  }
+  /* end for wordpress */
+
+
+
   &__title{
     margin: 0;
     text-transform: uppercase;
     color: $dark-blue;
     font-size: $font-size;
     font-weight: $regular;
+    flex: 0 0 100%;
   }
 
 
   &--footer{
+    flex-wrap: wrap;
     margin-top: 20px;
     border-bottom: none;
     
@@ -103,23 +159,34 @@
       text-align: left;
       font-size: $font-size-content;
     }
-    .nav__item{
+    &__item, .menu-item{
       margin: 15px 0;
       padding: 0;
       &:after{
         content: "";
       }
+      .nav__link{
+        padding: 0;
+        &:after{
+          display: none;
+        }       
+      }
     }
-    .nav__link{
-      padding-bottom: 0;
-      &--active{
-        border-bottom: 2px solid $light-blue; 
-      }      
+    /* wp */
+    .nav__list > li > a{
+      padding: 0;
+      &:after{
+        display: none;
+      }
     }
+    .nav__list .current_page_item > a{
+      border-bottom: none;
+    } 
+    /* end wp */  
   }
 }
 
-.dropdown-menu{
+.dropdown-menu, .sub-menu{
   font-size: $font-size-promo;
   padding-left: 0;
   margin: 0;
@@ -138,7 +205,7 @@
     bottom: 5px;
   }
 
-  &__item{
+  &__item, .menu-item{
     flex: 0 0 20%;
     max-width: 20%;
     @include mq($from:xs, $until:lg){
@@ -148,25 +215,27 @@
 
     &:hover, &:focus, &:active{
       background-color: $light-blue;
-      .dropdown-menu__link{
+      a{
         color: $text-color-white; 
         transition: none;       
       }
-    }    
-  }
-  &__link{
+    }   
+  } 
+  &__link, a{
+    color: $text-color;
     display: inline-block;
     padding: 15px;
     @include mq($from:xs, $until:lg){
       padding: 5px;
       font-size: 0.9em;
     }
-  }  
+  } 
 }
 
 .search{
   flex: 0 0 auto;
   min-width: 15px;
+  padding-bottom: 5px;
   margin-top: -5px;
   position: relative;
   margin-left: 20px;
@@ -226,7 +295,7 @@
   &__icon{
     display: block;
     position: absolute;
-    z-index: 3;
+    z-index: 2;
     right: 0;
     top: 50%;
     transform: translate(-100%, -50%);

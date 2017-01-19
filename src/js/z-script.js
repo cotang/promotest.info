@@ -23,7 +23,6 @@ jQuery(document).ready(function($){
     } else {
       $('.footer__address').hide();
     }
-
     var tel0 = $(this).data("tel0");
     $('.header__tel-wrapper').html('<a class="header__tel" target="_blank" href="tel:+'+tel0+'">'+tel0+'</a>');
     var tel0Name = "Телефон";    
@@ -108,22 +107,22 @@ jQuery(document).ready(function($){
   }); 
 
   /* Form in the modal window */
-  $('.btn[data-form]').click( function(e){
-    e.preventDefault(); 
-    var suffix = $(this).data("form"); 
-    var overlay = $('.overlay');
-    $('body').css({"overflow":"hidden"});   
-    $(overlay).show();
-    var formClass = '.form--' + suffix;
-    $(overlay).find(formClass).fadeIn();    
-  });
+  // $('.btn[data-form]').click( function(e){
+  //   e.preventDefault(); 
+  //   var suffix = $(this).data("form"); 
+  //   var overlay = $('.overlay');
+  //   $('body').css({"overflow":"hidden"});   
+  //   $(overlay).show();
+  //   var formClass = '.form--' + suffix;
+  //   $(overlay).find(formClass).fadeIn();    
+  // });
   /* Close the modal window */
-  $('.overlay__bg, .form__close').click( function(e){ 
-    e.preventDefault(); 
-    $('body').css({"overflow":"auto"});
-    $(this).closest('.overlay').find('.form').fadeOut();
-    $('.overlay').fadeOut(400);
-  }); 
+  // $('.overlay__bg, .form__close').click( function(e){ 
+  //   e.preventDefault(); 
+  //   $('body').css({"overflow":"auto"});
+  //   $(this).closest('.overlay').find('.form').fadeOut();
+  //   $('.overlay').fadeOut(400);
+  // }); 
 
   /* Sticky and absolute form in sidebar */
   var sidebarForm = $('.sidebar__form');
@@ -151,6 +150,56 @@ jQuery(document).ready(function($){
       }
     }
   });
+  var sideHeight = sidebarFormOuterHeight - $('.breadcrumbs').outerHeight(true);
+  if ($('.content').outerHeight(true) <= sideHeight){
+    $('.content').height(sideHeight)
+  }
+
+
+  /* for wordpress */
+  $('.menu-item-has-children').children('a').attr('href', 'javascript:void(0);');
+
+  /* форма вопроса */
+  $(".btn[data-form='question']").fancybox({
+      href : 'ajax-zadat-vopros',
+      type : 'iframe',
+      maxWidth  : 500,
+      maxHeight : 750,
+      minHeight : 550,
+      width     : '100%',
+      height    : '100%'
+  });
+  /* форма обратного звонка */
+  $(".btn[data-form='call']").fancybox({
+      href : 'ajax-zakazat-zvonok',
+      type : 'iframe',
+      maxWidth  : 500,
+      maxHeight : 750,
+      minHeight : 530,
+      width     : '100%',
+      height    : '100%'
+  });
+
+  /* mcc recaptcha */
+  // jQuery('.sidebar .recaptcha').data('capsize','normal')
+
+  /* mcc forms - placeholders */
+  /* application */
+  jQuery('.form--application .mcc-form input').each(function( key,value) {
+    var e = jQuery(this);
+    var text = e.closest('.mcc-value').prev('.mcc-label').find('.mcc-label-mini-div').text();
+    e.attr('placeholder',text);
+    e.closest('.mcc-value').prev('.mcc-label').hide();
+  });
+  /* forms */  
+  var myForm = jQuery('.form--review, .form--question');
+  myForm.find('.mcc-form input, .mcc-form textarea').each(function( key,value) {
+    var e = jQuery(this);
+    var text = e.closest('tr').find('.mcc-label').text();
+    e.attr('placeholder',text);
+    myForm.find('table tr').find('td:first').hide();
+  });
+  /* end for wordpress */
 
 });
 

@@ -1,7 +1,4 @@
 .reviews{
-  // margin-top: 40px;
-  // margin-bottom: 20px;
-
   &__pics{
     display: flex;
     flex-wrap: wrap;
@@ -53,6 +50,25 @@
 .review{
   margin: 30px 0;
   &__title{
+    color: $dark-blue;
+  }
+}
+
+.reviews__articles{
+  .mcc-form{
+    display: none;
+  }
+}
+
+.form--review{
+  #mcc_comments_rows_block{
+    display: none;
+  }
+}
+
+
+.mcc_comments_row_block{
+  a {
     color: $dark-blue;
   }
 }

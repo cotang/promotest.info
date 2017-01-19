@@ -1,6 +1,9 @@
 .promo{
 
   &__gallery{
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; 
@@ -17,7 +20,7 @@
       justify-content: center;
     }       
   }
-  &__item{
+  &__link{
     display: block;
     padding-bottom: 40px;
     &:hover, &:focus{
@@ -25,7 +28,7 @@
         background-color: rgba(0,0,0,.7);
       } 
       .promo__img:after{
-        display: block;
+        opacity: 1;
       }
       .promo__title{
         color: $light-blue;
@@ -57,7 +60,7 @@
       top: 50%;
       transform: translate(-50%, -50%);
       @include sprite($s-promo-link);
-      display: none;
+      opacity: 0;
     }
     img{
       display: block;

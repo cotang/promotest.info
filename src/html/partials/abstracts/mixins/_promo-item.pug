@@ -1,5 +1,6 @@
 mixin promoItem(img, imgText, title)
-  +e.A.item(href="#")
-    +e.img
-      img(src= "img/" + img alt= imgText title= imgText)
-    +e.H3.title #{title}
+  +e.LI.item
+    +e.A.link(href="#")
+      +e.img
+        img(src= "img/" + img alt= imgText title= imgText)
+      +e.H3.title #{title}
