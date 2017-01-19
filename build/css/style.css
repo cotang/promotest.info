@@ -1168,7 +1168,6 @@ h4 {
     display: none; }
 
 .footer {
-  display: block;
   border-top: 3px solid #314b66;
   padding-top: 40px; }
   .footer__address {
